@@ -190,6 +190,7 @@ Processo de dinâmica molecular com a hemoglobina não deu certo, muitas dificul
 
 ***Busca de mais referências a partir do Lehninger:***
 
+![Imagem do livro do Professor](Imagens/Imagem-Glycogen.jpg)
 
 
 ### Características de Interesse para Novas Moléculas: 
