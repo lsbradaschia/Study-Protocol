@@ -129,11 +129,93 @@ Pergunta 1: *Existem outras formas de chamar essas variantes de interesse de for
 - [Informações Gerais da Genotipagem dos Dados brutos 1000G](https://ftp-trace.ncbi.nih.gov/1000genomes/ftp/1000G_2504_high_coverage/working/20201028_3202_raw_GT_with_annot/20201028_1000G_2020Oct26_NYGC_JointGenotyping_README.pdf)
 
 ### TÓPICO 2: Problema com NMSIM 
+Alguns dos arquivos PDB que foram gerados pelo NSIM vieram sem a numeração correta da coluna 'Model'. *Uma das hipóteses é que ocorre com os arquivos cif convertidos pra pdb, mas não foi testado pra certeza ainda*. 
 
 **URGENTE:**
-- [ ] Refazer o script em python e linux para pré-processar arquivos **erroneamente** *sem numeração na coluna ***Model***.
+- [ ] Refazer o script em `python` e `linux` para pré-processar arquivos **erroneamente** *sem numeração na coluna ***Model***. Pré-processamento deve ser feito no arquivo pdb gerado pelo NMSIM. Utilizar a proteina [`2N8N`](https://www.rcsb.org/structure/2N8N) como teste para desenvolvimento do script.
+
+**Artigos e Dúvidas Gerais:**
+
+- [Segunda Etapa SlytheRINs](https://pubs.acs.org/doi/10.1021/acschembio.9b00339)
+- [ ] How does the correct fold emerge from such fundamental step?
+- [ ] How is the energy landscape unique to a spefici protein defind by its amino-acid sequences?
+
+---
+
+## Entrada 03/07/2025: Delimitações do Paper SlytheRINs
+
+### Formatações:
+- IEEE/ACS
+- [**Oxford Academics Bioinformatics - *Section Application Notes***](https://academic.oup.com/bioinformatics/search-results?allJournals=1&f_TocHeadingTitleList=APPLICATIONS+NOTESANDAPPLICATIONS+NOTE&fl_SiteID=5139&page=1)
+- [*Author guidelines Application Notes*](https://academic.oup.com/bioinformatics/pages/author-guidelines#section-4-2)
+
+### Batata SlytheRINs:
+- Teste 'Batata': Busca de proteína para 'example data' do SlytheRINs de conhecimento amplo à comunidade científica, sendo este destrinchado na secão 'APPLICATION' do artigo.
+     - [ ] [~HBB GLU6VAL (Anemia falciforme)~](https://docs.google.com/document/d/1UPyMcH3Py0fy9s5JbbnUOdlD0B-RzTpOUZgXIMuZ0iA/edit?tab=t.0#heading=h.9ncvbax3hqvh)
+        *Descarte após dificuldade da realização de dinâmica moleuclar no GROMACS, não funciona no NMSIM também* 
+
+### Descrição Geral (SlytheRINs) - Documentação
+- [https://docs.google.com/document/d/1BrN7DwxcqeaaG_cNz8fTQCWe9csxnZIDVE3lDXY4Sx8/edit?tab=t.0]
+- [Organização Geral de Apresentação do SlytheRINs](https://docs.google.com/document/d/1Q4vwKsrjseAVAmWfbVxp89sFHMhvDVhHiGmk0EIUGuo/edit?tab=t.0)
+
+---
+
+## Entrada 23/07/2025 - Artigo brainstorm
+
+### OVERVIEW:
+1. key tech
+   - main components: input, code language, requirements, main features
+     (i) Code/Requirements: Python, Streamlit, approachable web application of pyton-based scripts online.
+     (ii) Main features: Comparative RIN Analysis, Chemical Interaction Analysis, Alpha Missense Integration
+
+### LINKs:
+- [Drive de escrita](https://drive.google.com/drive/folders/1TN_ivc4Yq4Kaz9mZaotI4PT2HDox-YpQ)
+- [Anotações e Estudos associados ao SlytheRINs](https://github.com/lsbradaschia/Study-Protocol/edit/main/STUDY1.md)
+
+---
+
+## Entrada 28/08/2025 - HBB descartada
+
+Processo de dinâmica molecular com a hemoglobina não deu certo, muitas dificuldades foram encontradas devido à alta complexidade da molécula. Por isso, uma busca deve ser feita por moléculas de interesse para seguir sendo a *Batata* da ferramenta. 
+
+### Candidatas: 
+- Proteínas da *Via Glicogênica*;
+- Glicogênio Sintases;
+- Fosforilases;
+- Glucoquinases/Glucokinase (Síndrome mud2);
+- G6PD
+- Fatores de Transcrição;
+- Associadas à Glycogen Storage Disease (GSD);
+- Monômeros (Cadeia simples de proteína complexa)
+
+***Busca de mais referências a partir do Lehninger***
 
 
+### Características de Interesse para Novas Moléculas: 
+- ***Pequenas*** (cadeia única)
+- Solúveis em água (para dinâmica simples no GROMACS)
+- ***Evitar moléculas Transportadoras***
+
+### Ferramentas de simulação de dinâmica iniciais: 
+As proteínas selecionadas terão sua trajetória simulada por **duas** ferramentas disponíveis na web. Uma delas é o [`NMSIM`](https://cpclab.uni-duesseldorf.de/nmsim/), já utilizada anteriormente. A segunda é [`BioEmu`](https://github.com/microsoft/bioemu), recentemente publicada. Tem uma versão web disponível em um Colab Notebook, acesso pelo [`ColabFold`](https://github.com/sokrypton/ColabFold). 
+
+Outra ferramenta interesasnte para a etapa de dinâmica é a [`VMD`](https://www.ks.uiuc.edu/Research/vmd/), para visualização da trajetória. Professor comentou que está disponível para Windows. 
+
+- [Paper BioEmu](https://www.science.org/doi/abs/10.1126/science.adv9817)
+
+### GROMACS
+Etapa ainda distante, mas uma observação feita pelo professor foi a dinâmica deve ter ***aproximadamente 2000 frames*** para que seja possível visualizar algum resultado verídico. 
+
+### ETAPAS:
+1. Busca de proteínas com *MUTAÇÕES MISSENSE* que apresentam as características desejadas (tanto em seu estado nativo quanto mutado)
+2. Seleção e simulação de dinâmica simples com **NMSIM** e **BioEmu**.
+3. ***Análise Comparativa entre Resultados NMSIM e BioEmu***.
+
+### LINKS E FERRAMENTAS: 
+- Charmm-Gui [https://www.charmm-gui.org/]
+- Tutorial GROMACS [http://www.mdtutorials.com/gmx/lysozyme/01_pdb2gmx.html]
+- Documentação GROMACS [https://manual.gromacs.org/current/index.html]
+- ModRefiner [https://zhanglab.comp.nus.edu.sg/ModRefiner/]
 
 
 
