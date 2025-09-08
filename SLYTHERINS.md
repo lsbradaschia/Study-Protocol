@@ -188,7 +188,8 @@ Processo de dinâmica molecular com a hemoglobina não deu certo, muitas dificul
 - Associadas à Glycogen Storage Disease (GSD);
 - Monômeros (Cadeia simples de proteína complexa)
 
-***Busca de mais referências a partir do Lehninger***
+***Busca de mais referências a partir do Lehninger:***
+
 
 
 ### Características de Interesse para Novas Moléculas: 
