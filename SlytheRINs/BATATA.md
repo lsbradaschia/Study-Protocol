@@ -22,7 +22,7 @@ Para a busca de molécula apropriada, será feita uma busca por moléculas peque
 | Tipo VIb, VIII or IX    | Phosporylase kinase                | Liver, erythrocytes, muscle     | PHKA1, PHKA2, PHKB, PHKG2    |
 | Tipo XI (Fanconi-Bickel | Glucose transporter (GLUT2)        | Liver                           | LDHA                         |
 
-** Mais de 60 moléculas associadas à tipo II (Pompe's) pela QIAGEN. Todas as molécuals e filtragem vou fazer a frente.
+** Mais de 60 moléculas associadas à tipo II (Pompe's) pela QIAGEN. Todas as moléculas e filtragem vou fazer a frente.
 
   
 *** Buscar na literatura se existem associações de genes ao tipo V.
