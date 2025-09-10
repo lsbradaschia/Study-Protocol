@@ -31,6 +31,23 @@ Para a busca de molécula apropriada, será feita uma busca por moléculas peque
 
 Pra curadoria e testagem do Software, vou usar a QIAGEN IPA pra curagem de genes associados pra cada um dos tipos de GSD de interesse. O software da QIAGEN tem uma aba específica de '*Diseases and Functions*' onde posso procurar diretamente pela GSD do tipo desejado, e moléculas associadas. 
 
+### Busca de Moléculas Associadas por busca bibliográfica
+
+Busca por artigos científicos levaram a 3 artigos de revisão sobre GSD, onde informações quanto a localização do gene, frequência de variantes, e principais moléculas relacionadas a cada tipo da doença podem ser facilmente identificados a partir das tabelas. 
+
+**[Glycogen Storage Disease](https://doi.org/10.1038/s41572-023-00456-z)**
+- [Clinical Features of GSDs](SlytheRINs/Papers/sup-table1.pdf)
+- [Epidemology of GSDs](SlytheRINs/Papers/sup-table2.pdf)
+
+
+**[Glycogen Storage Diseases: an update](https://doi.org/10.3748/wjg.v29.i25.3932)**
+- [Overview of GSDs](SlytheRINs/Papers/gene-loc.pdf)
+    - Informação sobre localização do gene
+
+ **[Glycogen Metabolism and glycogen Storage diseases](http://dx.doi.org/10.21037/atm.2018.10.59)**
+- [Characteristics of Inborn errors of glycogen metabolism](SlytheRINs/Papers/tabela-frequencia.pdf)
+    - Informação sobre frequência de cada tipo da doença (quando existente)
+
 ### Tipo 0
 GLS1/GYS2
 Glycogen Byosinthesis II (UDP-D-Glucose)
