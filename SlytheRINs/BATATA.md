@@ -1,9 +1,8 @@
 # Estudos Diversos
 
-## Busca por Proteína Batata
+## Batata - Proteína simples pra example data do SlytheRINs 
 
-Capítulos de Interesse do Leninger: 
-- Capítulo 13, 14 e 15 (Metabolismo; Glycolysis, Glucogenesis and the Pentose Phospate Pathway; Metabolism of Glycogen in Animals)
-- Cap 13 (1700 - 1836)
-- cap 14 (1866 - 2004)
-- cap 15 (2027 - 2072)
+Para a busca de molécula apropriada, será feita uma busca por moléculas pequenas e de cadeia simples. Para busca afunilada, o foco será na '*Glycogen Storage Disease*', e proteínas que apresentam mutações *missense* nos diversos tipos dessa doença. 
+![Imagem Referência](Imagens/Imagem-Glycogen.jpg) 
+
+### Busca de Moléculas Associadas usando QIAGEN
