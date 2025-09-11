@@ -44,6 +44,9 @@ Associada ao mal funcionamento de uma **sub-unidade** da G6P codificada pelo gen
 - ClinVar: [613742[MIM]](https://www.ncbi.nlm.nih.gov/clinvar/?term=613742[MIM])
 - PDB: [97JV](https://www.rcsb.org/structure/9J7V)
   - Recentemente submetida (2025). [https://www.pnas.org/doi/10.1073/pnas.2418316122]
+- AlphaFoldDB: [AF-P35575-F1-v4](https://alphafold.ebi.ac.uk/entry/P35575)
+ 
+***NOTA:*** Existe uma divergencia entre o número de aa existentes na versão final da subunidade. UniProt não indica nenhum ponto de clivagem (nem mesmo da posição 1), enquanto os arquivos PDB possuem 352 aa, onde os faltantes são do N-terminal. Vou usar tanto o arquivo pdb nativo quanto o modelado do **AlphaFold** para os testes. 
  
 Selecionei 3 variantes que possuem os maiores números de publicação a respeito:
 - 	**[VAR_005239](https://web.expasy.org/variant_pages/VAR_005239.html#) (12 Publicações)**
