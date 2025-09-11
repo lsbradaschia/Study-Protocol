@@ -180,10 +180,10 @@ Processo de dinâmica molecular com a hemoglobina não deu certo, muitas dificul
 
 ### Candidatas: 
 - Proteínas da *Via Glicogênica*;
-- Glicogênio Sintases;
+- Glicogênio Sintase;
 - Fosforilases;
 - Glucoquinases/Glucokinase (Síndrome mud2);
-- G6PD
+- G6P/G6pase
 - Fatores de Transcrição;
 - Associadas à Glycogen Storage Disease (GSD);
 - Monômeros (Cadeia simples de proteína complexa)
