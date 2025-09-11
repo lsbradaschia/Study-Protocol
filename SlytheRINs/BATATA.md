@@ -61,6 +61,10 @@ Selecionei 3 variantes que possuem os maiores números de publicação a respeit
 
 
 
+
+
+***ANOTAÇÕES GERAIS ABAIXO***
+---
 ### Busca de Moléculas Associadas por busca bibliográfica
 
 Busca por artigos científicos levaram a 3 artigos de revisão sobre GSD, onde informações quanto a localização do gene, frequência de variantes, e principais moléculas relacionadas a cada tipo da doença podem ser facilmente identificados a partir das tabelas. 
