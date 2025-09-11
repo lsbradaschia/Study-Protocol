@@ -62,6 +62,8 @@ Selecionei 3 variantes que possuem os maiores números de publicação a respeit
     - [Patogênica](https://www.ncbi.nlm.nih.gov/clinvar/variation/12004/?oq=((27043[AlleleID]))&m=NM_000151.4(G6PC1):c.113A%3ET%20(p.Asp38Val))
     - [Ensembl](https://www.ncbi.nlm.nih.gov/clinvar/variation/12004/?oq=((27043[AlleleID]))&m=NM_000151.4(G6PC1):c.113A%3ET%20(p.Asp38Val))
 
+#### NMSIM PDB 97JV
+[]
 
 
 
