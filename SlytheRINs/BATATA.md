@@ -63,8 +63,12 @@ Selecionei 3 variantes que possuem os maiores números de publicação a respeit
     - [Ensembl](https://www.ncbi.nlm.nih.gov/clinvar/variation/12004/?oq=((27043[AlleleID]))&m=NM_000151.4(G6PC1):c.113A%3ET%20(p.Asp38Val))
 
 #### NMSIM PDB 97JV
-[]
+[LINK 97JV NATIVA](https://cpclab.uni-duesseldorf.de/nmsim/results/7mSURtgxwdyM4rb/)
 
+***Seleção de Melhor Modelo de AlphaFold com RevelioPlots***
+fold_a83c_9j7v_model_0.cif
+
+[LINK 9J7V VAR_005239](https://cpclab.uni-duesseldorf.de/nmsim/results/SLyyhdWE1YNTCUd/)
 
 
 
