@@ -31,6 +31,36 @@ Para a busca de molécula apropriada, será feita uma busca por moléculas peque
 
 Pra curadoria e testagem do Software, vou usar a QIAGEN IPA pra curagem de genes associados pra cada um dos tipos de GSD de interesse. O software da QIAGEN tem uma aba específica de '*Diseases and Functions*' onde posso procurar diretamente pela GSD do tipo desejado, e moléculas associadas. 
 
+---
+
+### GSD Ia 
+Associada ao mal funcionamento de uma **sub-unidade** da G6P codificada pelo gene **G6PC1**. A seguinte [tabela](SlytheRINs/Papers/sup-table2.pdf) retirada de uma revisão indicam muitas variantes nessa sub-unidade. 
+
+#### G6PC1 - Unidade catalítica 1 da Glucose-6-Fosfatase
+
+- UNIPROT: [P35575](https://www.uniprot.org/uniprotkb/P35575/entry)
+- TAMANHO: 357 AA
+- OMIM: [232200](https://www.omim.org/entry/232200); [613742](https://www.omim.org/entry/613742?search=gsd1a&highlight=gsd1a)
+- ClinVar: [613742[MIM]](https://www.ncbi.nlm.nih.gov/clinvar/?term=613742[MIM])
+- PDB: [97JV](https://www.rcsb.org/structure/9J7V)
+  - Recentemente submetida (2025). [https://www.pnas.org/doi/10.1073/pnas.2418316122]
+ 
+Selecionei 3 variantes que possuem os maiores números de publicação a respeito:
+- 	**[VAR_005239](https://web.expasy.org/variant_pages/VAR_005239.html#) (12 Publicações)**
+    - [rs1801175](https://www.ncbi.nlm.nih.gov/snp/rs1801175)
+    - [Patogênica](https://www.ncbi.nlm.nih.gov/clinvar?term=((2749251[AlleleID])OR(27037[AlleleID])))
+    - [Ensembl](http://www.ensembl.org/Homo_sapiens/Variation/Explore?r=17:42903447-42904447;v=rs1801175;vdb=variation;vf=959569854)
+-   **[VAR_005246](https://web.expasy.org/variant_pages/VAR_005246.html) (5 Publicações)**
+    - [rs80356482](https://www.ncbi.nlm.nih.gov/snp/rs80356482)
+    - [Patogênica](https://www.ncbi.nlm.nih.gov/clinvar?term=((211810[AlleleID])OR(27047[AlleleID])))
+    - [Ensembl](http://www.ensembl.org/Homo_sapiens/Variation/Explore?r=17:42908918-42909918;v=rs80356482;vdb=variation;vf=960112920)
+-   **[VAR_005237](https://web.expasy.org/variant_pages/VAR_005237.html) (4 Publicações)**
+    - [rs104894565](https://www.ncbi.nlm.nih.gov/snp/rs104894565)
+    - [Patogênica](https://www.ncbi.nlm.nih.gov/clinvar/variation/12004/?oq=((27043[AlleleID]))&m=NM_000151.4(G6PC1):c.113A%3ET%20(p.Asp38Val))
+    - [Ensembl](https://www.ncbi.nlm.nih.gov/clinvar/variation/12004/?oq=((27043[AlleleID]))&m=NM_000151.4(G6PC1):c.113A%3ET%20(p.Asp38Val))
+
+
+
 ### Busca de Moléculas Associadas por busca bibliográfica
 
 Busca por artigos científicos levaram a 3 artigos de revisão sobre GSD, onde informações quanto a localização do gene, frequência de variantes, e principais moléculas relacionadas a cada tipo da doença podem ser facilmente identificados a partir das tabelas. 
@@ -107,9 +137,9 @@ Vou primeiramente considerar os pontos acima e buscar a partir da busca bibliogr
 ### GSD com deficiência em subunidades associadas a doença
 - ***GSD1a (Von Gierke) - mais frequente***
     - Glucose-6-Phosphatase. Deficiency results from impaired ability of the hydrolase **subunit of G6Pase**, also known as G6Pase-α to hydrolyze G6P, leading to impaired function of G6Pase in removing the phosphate group from glucose-6-phosphate (G6P).
-    - GSD1a mode of inheritance is autosomal recessive; with **mutations in the G6PC gene on chromosome 17p21.31 encoding α-glucose-6-phosphatase (G6Pase-α)
+    - GSD1a mode of inheritance is autosomal recessive; with **mutations in the G6PC1 gene on chromosome 17p21.31 encoding α-glucose-6-phosphatase (G6Pase-α)
 enzyme**.
-    - G6PC1, ASS1, GAA, NR3C1 (QIAGEN)
+    - **G6PC1**, ASS1, GAA, NR3C1 (QIAGEN)
 - ***GSD9c***
     - Impaired **gamma unit of phosphorylase kinase enzyme** function in liver and testis.
     - Because the gamma subunit contains the catalytic site of the enzyme, GSD9C typically has a more severe phenotype.
