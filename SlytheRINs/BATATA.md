@@ -39,15 +39,104 @@ Busca por artigos científicos levaram a 3 artigos de revisão sobre GSD, onde i
 - [Clinical Features of GSDs](SlytheRINs/Papers/sup-table1.pdf)
 - [Epidemology of GSDs](SlytheRINs/Papers/sup-table2.pdf)
 
-
+---
 **[Glycogen Storage Diseases: an update](https://doi.org/10.3748/wjg.v29.i25.3932)**
 - [Overview of GSDs](SlytheRINs/Papers/gene-loc.pdf)
     - Informação sobre localização do gene
+**Trechos de Relevância**
+- ***GSD-IX; PHK deficiency***
+    - PHK is a heterotetramer composed of **4 different subunits (α, β, γ, and δ)**. Each subunit is **encoded by different genes** that are located on different chromosomes and differentially expressed in a variety of tissues. ***α and β subunits have regulatory functions, the γ subunit contains the catalytic site, and δ is a calmodulin protein***.
+    - α subunit: PHKA1(muscle) and PHKA2(liver) on the X choromossome.
+    - γ subunit: PHKG1(muscle) and PHKG2(liver).
+    -  β subunit: PHKB
+  - GSD-IX Classification:
+      - According to gene: *X-linked form (GSD-IXa or X-linked glycogenosis)*
+      - According to autossomal recessive forms: GSD-IXb and GSD-IXc 
 
+---
  **[Glycogen Metabolism and glycogen Storage diseases](http://dx.doi.org/10.21037/atm.2018.10.59)**
 - [Characteristics of Inborn errors of glycogen metabolism](SlytheRINs/Papers/tabela-frequencia.pdf)
     - Informação sobre frequência de cada tipo da doença (quando existente)
+**Trechos de relevância**
+- GSD0a
+    - liver glycogen synthase enzyme deficiency with impaired ability to incorporate UDP-glucose onto glycogen strands and elongate it within the liver. GSD0a is an **autosomal recessive disorder caused by a mutation in the GYS2 gene located at 12p12.2 that codes for the hepatic isoform of glycogen synthase**.
+- GSD1a (Von Gierke)
+    - Glucose-6-Phosphatase. Deficiency results from impaired ability of the hydrolase **subunit of G6Pase**, also known as G6Pase-α to hydrolyze G6P, leading to impaired function of G6Pase in removing the phosphate group from glucose-6-phosphate (G6P).
+    - G6Pase-α is necessary to convert fructose and galactose into glucose and is expressed in the liver, kidney, and intestines.
+    - GSD1a mode of inheritance is autosomal recessive; with **mutations in the G6PC gene on chromosome 17p21.31 encoding α-glucose-6-phosphatase (G6Pase-α)
+enzyme**.
+    - GSD1 incidence is about 1 in 100,000 with GSD1a accounting for 80% of diagnosis. Within the Ashkenazi Jewish population, the suggested incidence of GSD1a is 1 in 20,000.
+- GSD1b
+    - GSD1b has autosomal recessive inheritance, with 92 different reported with 31 confirmed as pathogenic mutations in SLC37A4 gene on chromosome 11q23, encoding glucose-6-phosphate translocase (G6PT) enzyme (GDE); and no apparent genotype-phenotype relationship.
+    - G6PT enzyme is a transmembrane protein found within the endoplasmic reticulum and functions to move G6P into the endoplasmic reticulum. G6Pase-α and G6PT together as the G6Pase complex maintains glucose homeostasis.
 
-### Tipo 0
-GLS1/GYS2
-Glycogen Byosinthesis II (UDP-D-Glucose)
+- GSD 6
+    - Hers disease or liver phosphorylase enzyme deficiency, is a glycogenolysis defect. Diagnostic confirmation includes molecular analysis of **PYGL** gene.
+- GSD9a1 e GSD9a2
+    - impaired phosphorylase kinase activity in the liver or erythrocyte (GSD9a1) or only liver (GSD9a2). Most common of all GSD9
+    - X-linked inheritance with mutations in the **PHKA2** gene on chromosome Xp22.13 that encodes liver phosphorylase kinase.
+- GSD9c
+    - Impaired **gamma unit of phosphorylase kinase enzyme** function in liver and testis.
+    - Because the gamma subunit contains the catalytic site of the enzyme, GSD9C typically has a more severe phenotype.
+    - Autosomal recessive disorder caused by **mutations of the PHKG2** gene which encodes the **gamma subunit of phosphorylase kinase** on chromosome
+16p11.2
+
+- GSD9b
+    - Also known as phosphorylase kinase deficiency of liver and muscle. An autosomal recessive disorder caused by **mutations of β subunit of PHKB** gene on chromosome 16q12.1
+
+---
+
+### Candidatas: 
+Considerando as Candidatas/Indicações que o professor deu baseadas no Lehninger: 
+- Proteínas da *Via Glicogênica*;
+- Glicogênio Sintase;
+- Fosforilases;
+- Glucoquinases/Glucokinase (Síndrome mud2);
+- G6P/G6pase
+- Fatores de Transcrição;
+- Associadas à Glycogen Storage Disease (GSD);
+- Monômeros (Cadeia simples de proteína complexa)
+
+Vou primeiramente considerar os pontos acima e buscar a partir da busca bibliográfica anomalias já associadas à **subunidades**, para maior chance de moléculas pequenas e de cadeia única para a pesquisa já antes confirmadas ligadas a doença. Caso necessário, buscarei por outras moléculas seguindo a seguinte ordem:
+
+1. Associação direta com a síntese de Glicogênio (e tipos de GSD associadas);
+2. Associada a anomalia no funcionamento de fosforilases(e GSDs associadas);
+3. Glucoquinases;
+4. Frequência de GSD predominante
+
+### GSD com deficiência em subunidades associadas a doença
+- ***GSD1a (Von Gierke) - mais frequente***
+    - Glucose-6-Phosphatase. Deficiency results from impaired ability of the hydrolase **subunit of G6Pase**, also known as G6Pase-α to hydrolyze G6P, leading to impaired function of G6Pase in removing the phosphate group from glucose-6-phosphate (G6P).
+    - GSD1a mode of inheritance is autosomal recessive; with **mutations in the G6PC gene on chromosome 17p21.31 encoding α-glucose-6-phosphatase (G6Pase-α)
+enzyme**.
+    - G6PC1, ASS1, GAA, NR3C1 (QIAGEN)
+- ***GSD9c***
+    - Impaired **gamma unit of phosphorylase kinase enzyme** function in liver and testis.
+    - Because the gamma subunit contains the catalytic site of the enzyme, GSD9C typically has a more severe phenotype.
+    - Autosomal recessive disorder caused by **mutations of the PHKG2** gene which encodes the **gamma subunit of phosphorylase kinase** on chromosome
+16p11.2
+    - PHKA1, PHKA2, PHKB, PHKG2 (QIAGEN)
+***- GSD9b***
+    - Also known as phosphorylase kinase deficiency of liver and muscle. An autosomal recessive disorder caused by **mutations of β subunit of PHKB** gene on chromosome 16q12.1
+
+- ***GSD7 (Tarui Disease)***
+    - Deficient muscle **subunit of phosphofructokinase (PFK) enzyme**.
+    - GSD9D is an X-linked recessive disorder caused by **mutations of the PHKA1 gene** which **encodes the alpha subunit** of muscle phosphorylase kinase on chromosome Xq13.1.
+    - The overall prevalence of GSD9 is estimated to be 1 in 100,000.
+
+---
+
+### GSD IX - Fosforilase Quinase (PHK) 
+
+GSD IX pode ser de diferentes subtipos, todos associados às diferentes **subunidades** da PHK. Cada uma das 4 subunidades da PHK é codificada por um gene diferentes, localizado em diferentes cromossomos. As subunidades α e γ possuem diferentes isoformas dependendo da sua área de atuação (rins ou músculos). Subunidades α e β tem função regulatória, γ é a subunidade catalítica e δ é uma calmodulina (sinalizadora). 
+
+    - α : PHKA1(muscle) and PHKA2(liver) on the X choromossome. `Tarui Disease/GSD VII/ GSD IXa`
+    - γ : PHKG1(muscle) and PHKG2(liver). `GSD IXc`
+    - β: PHKB. `GSD IXb`
+
+
+   
+
+- Anotei previamente GSD0, IV e XV diretamente associadas. Revisar nos artigos e IPA para seguir com candidatas. 
+
+
