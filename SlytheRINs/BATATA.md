@@ -47,6 +47,59 @@ Associada ao mal funcionamento de uma **sub-unidade** da G6P codificada pelo gen
 - AlphaFoldDB: [AF-P35575-F1-v4](https://alphafold.ebi.ac.uk/entry/P35575)
  
 ***NOTA:*** Existe uma divergencia entre o número de aa existentes na versão final da subunidade. UniProt não indica nenhum ponto de clivagem (nem mesmo da posição 1), enquanto os arquivos PDB possuem 352 aa, onde os faltantes são do N-terminal. Vou usar tanto o arquivo pdb nativo quanto o modelado do **AlphaFold** para os testes. 
+
+### Shell Script para Numeração Automática de "MODEL" em arquivos PDB
+```bash
+awk 'BEGIN{c=1} /^MODEL/ {printf "MODEL     %4d\n", c++} !/^MODEL/ {print}' 9J7V_trajectory.pdb > 9J7V_teste.pdb
+
+```
+#### Checagem e unzip de arquivo PDB de trajetória em terminal Linux
+```
+#Primeiro descompactar usando gunzip
+gunzip -k 9J7V_trajectory.pdb.gz
+
+#Contagem de strings 'MODEL' presentes no arquivo (pro NMSIM como utilizamos, deve ser 500)
+grep -c "MODEL" 9J7V_trajectory.pdb.gz
+
+#Averiguar se o string "MODEL" está devidamente numerado
+##Esse comando, por default, lhe devolve a linha onde o string "MODEL" se encontra.        
+grep "MODEL" 9J7V_trajectory.pdb.gz
+
+````
+**NOTA:** O parâmetro -k cria um novo arquivo descompactado, mas mantém o antigo intacto. 
+
+
+Quando devidamente numerado, os números aparecerão ao lado do string "MODEL"
+```
+#Exemplo de output de .pdb devidamente numerado
+grep "MODEL" 9J7V_teste.pdb
+MODEL        1
+MODEL        2
+MODEL        3
+MODEL        4
+MODEL        5
+MODEL        6
+MODEL        7
+MODEL        8
+MODEL        9
+MODEL       10
+...
+
+Exemplo de output .pdb sem numeração
+```
+MODEL
+MODEL
+MODEL
+MODEL
+MODEL
+MODEL
+MODEL
+MODEL
+MODEL
+MODEL
+MODEL
+```
+
  
 Selecionei 3 variantes que possuem os maiores números de publicação a respeito:
 - 	**[VAR_005239](https://web.expasy.org/variant_pages/VAR_005239.html#) (12 Publicações)**
