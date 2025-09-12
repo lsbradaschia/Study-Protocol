@@ -83,9 +83,13 @@ MODEL        7
 MODEL        8
 MODEL        9
 MODEL       10
-...
 
-Exemplo de output .pdb sem numeração
+```
+
+
+
+**Exemplo de output .pdb sem numeração***
+
 ```
 MODEL
 MODEL
@@ -99,6 +103,7 @@ MODEL
 MODEL
 MODEL
 ```
+
 
  
 Selecionei 3 variantes que possuem os maiores números de publicação a respeito:
