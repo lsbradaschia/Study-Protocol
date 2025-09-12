@@ -48,13 +48,61 @@ Associada ao mal funcionamento de uma **sub-unidade** da G6P codificada pelo gen
  
 ***NOTA:*** Existe uma divergencia entre o número de aa existentes na versão final da subunidade. UniProt não indica nenhum ponto de clivagem (nem mesmo da posição 1), enquanto os arquivos PDB possuem 352 aa, onde os faltantes são do N-terminal. Vou usar tanto o arquivo pdb nativo quanto o modelado do **AlphaFold** para os testes. 
 
+### Script Python para .csv concatenando RMSD e RMSF para plotagem no [HufflePlots](https://protplots.streamlit.app/)
+
+```python
+
+#Bibliotecas
+import pandas as pd
+
+# Lista com arquivos '.txt' correspondentes a RMSD e RMSF
+## Substitua pelos seus próprios arquivos, ou posteriormente modificar o código para ler de um diretório +metadado pra nomenclatura
+
+files_rmsd = [
+    ('/content/9J7V_rmsdtostart.txt', 'G6PC1_WT'),
+    ('/content/fold_a83c_9j7v_rmsdtostart.txt', 'G6PC1_A83C' ),
+]
+
+files_rmsf = [
+    ('/content/9J7V_rmsfresidue.txt', 'G6PC1_WT'),
+    ('/content/fold_a83c_9j7v_rmsfresidue.txt', 'G6PC1_A83C'),
+]
+
+
+#RMSD
+# montagem de dataframe concatenando informações de RMSD de diferentes proteínas gerado pelo NMSIM
+rmsd = pd.read_csv(files_rmsd[0][0], sep=r'\s+', header=None, names=['Model', files_rmsd[0][1]])
+
+# Merge
+for file_name, source in files_rmsd[1:]:
+    temp_rmsd = pd.read_csv(file_name, sep=r'\s+', header=None, names=['Model', source])
+    rmsd = rmsd.merge(temp_rmsd, on='Model', how='outer')
+
+
+#Salva o df pra csv
+rmsd.to_csv('RMSD-G6PC1_A83C.csv', index=False)
+
+#RMSF
+# montagem de dataframe concatenando informações de RMSF de diferentes proteínas gerado pelo NMSIM
+rmsf = pd.read_csv(files_rmsf[0][0], sep=r'\s+', header=None, names=['Model', files_rmsf[0][1]])
+
+#merge
+for file_name, source in files_rmsf[1:]:
+    temp_rmsf = pd.read_csv(file_name, sep=r'\s+', header=None, names=['Model', source])
+    rmsf = rmsf.merge(temp_rmsf, on='Model', how='outer')
+
+#Salva o df pra csv
+rmsf.to_csv('RMSF-G6PC1_A83C.csv', index=False)
+
+```
+
 ### Shell Script para Numeração Automática de "MODEL" em arquivos PDB
 ```bash
 awk 'BEGIN{c=1} /^MODEL/ {printf "MODEL     %4d\n", c++} !/^MODEL/ {print}' 9J7V_trajectory.pdb > 9J7V_teste.pdb
 
 ```
 #### Checagem e unzip de arquivo PDB de trajetória em terminal Linux
-```
+```bash
 #Primeiro descompactar usando gunzip
 gunzip -k 9J7V_trajectory.pdb.gz
 
@@ -70,7 +118,7 @@ grep "MODEL" 9J7V_trajectory.pdb.gz
 
 
 Quando devidamente numerado, os números aparecerão ao lado do string "MODEL"
-```
+```bash
 #Exemplo de output de .pdb devidamente numerado
 grep "MODEL" 9J7V_teste.pdb
 MODEL        1
