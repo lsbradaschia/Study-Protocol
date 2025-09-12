@@ -70,6 +70,8 @@ fold_a83c_9j7v_model_0.cif
 
 [LINK 9J7V VAR_005239](https://cpclab.uni-duesseldorf.de/nmsim/results/SLyyhdWE1YNTCUd/)
 
+***Ambas sem numeração em MODEL***
+
 
 
 ***ANOTAÇÕES GERAIS ABAIXO***
