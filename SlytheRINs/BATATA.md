@@ -81,7 +81,11 @@ fold_a83c_9j7v_model_0.cif
 [LINK P35575 NATIVA](https://cpclab.uni-duesseldorf.de/nmsim/results/nlTRgLQvWOFeI/)
 
 ***Seleção de Melhor Modelo de AlphaFold com RevelioPlots***
+
+
 fold_p35575_a83c_model_0.cif
+
+
 [LINK P35575 VAR_005239](https://cpclab.uni-duesseldorf.de/nmsim/results/glWQPtWqgWX9czi/)
 
 
