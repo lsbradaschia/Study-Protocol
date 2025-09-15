@@ -48,6 +48,37 @@ Associada ao mal funcionamento de uma **sub-unidade** da G6P codificada pelo gen
  
 ***NOTA:*** Existe uma divergencia entre o número de aa existentes na versão final da subunidade. UniProt não indica nenhum ponto de clivagem (nem mesmo da posição 1), enquanto os arquivos PDB possuem 352 aa, onde os faltantes são do N-terminal. Vou usar tanto o arquivo pdb nativo quanto o modelado do **AlphaFold** para os testes. 
 
+
+Selecionei 3 variantes que possuem os maiores números de publicação a respeito:
+- 	**[VAR_005239](https://web.expasy.org/variant_pages/VAR_005239.html#) (12 Publicações)**
+    - [rs1801175](https://www.ncbi.nlm.nih.gov/snp/rs1801175)
+    - [Patogênica](https://www.ncbi.nlm.nih.gov/clinvar?term=((2749251[AlleleID])OR(27037[AlleleID])))
+    - [Ensembl](http://www.ensembl.org/Homo_sapiens/Variation/Explore?r=17:42903447-42904447;v=rs1801175;vdb=variation;vf=959569854)
+-   **[VAR_005246](https://web.expasy.org/variant_pages/VAR_005246.html) (5 Publicações)**
+    - [rs80356482](https://www.ncbi.nlm.nih.gov/snp/rs80356482)
+    - [Patogênica](https://www.ncbi.nlm.nih.gov/clinvar?term=((211810[AlleleID])OR(27047[AlleleID])))
+    - [Ensembl](http://www.ensembl.org/Homo_sapiens/Variation/Explore?r=17:42908918-42909918;v=rs80356482;vdb=variation;vf=960112920)
+-   **[VAR_005237](https://web.expasy.org/variant_pages/VAR_005237.html) (4 Publicações)**
+    - [rs104894565](https://www.ncbi.nlm.nih.gov/snp/rs104894565)
+    - [Patogênica](https://www.ncbi.nlm.nih.gov/clinvar/variation/12004/?oq=((27043[AlleleID]))&m=NM_000151.4(G6PC1):c.113A%3ET%20(p.Asp38Val))
+    - [Ensembl](https://www.ncbi.nlm.nih.gov/clinvar/variation/12004/?oq=((27043[AlleleID]))&m=NM_000151.4(G6PC1):c.113A%3ET%20(p.Asp38Val))
+
+#### NMSIM PDB 97JV
+[LINK 97JV NATIVA](https://cpclab.uni-duesseldorf.de/nmsim/results/7mSURtgxwdyM4rb/)
+
+***Seleção de Melhor Modelo de AlphaFold com RevelioPlots***
+fold_a83c_9j7v_model_0.cif
+
+[LINK 9J7V VAR_005239](https://cpclab.uni-duesseldorf.de/nmsim/results/SLyyhdWE1YNTCUd/)
+
+***Ambas sem numeração em MODEL***
+
+#### NMSIM AF-P35575-F1-v4 (Análise com estrutura AlphaFold)
+
+
+
+
+
 ### Script Python para .csv concatenando RMSD e RMSF para plotagem no [HufflePlots](https://protplots.streamlit.app/)
 
 ```python
@@ -151,32 +182,6 @@ MODEL
 MODEL
 MODEL
 ```
-
-
- 
-Selecionei 3 variantes que possuem os maiores números de publicação a respeito:
-- 	**[VAR_005239](https://web.expasy.org/variant_pages/VAR_005239.html#) (12 Publicações)**
-    - [rs1801175](https://www.ncbi.nlm.nih.gov/snp/rs1801175)
-    - [Patogênica](https://www.ncbi.nlm.nih.gov/clinvar?term=((2749251[AlleleID])OR(27037[AlleleID])))
-    - [Ensembl](http://www.ensembl.org/Homo_sapiens/Variation/Explore?r=17:42903447-42904447;v=rs1801175;vdb=variation;vf=959569854)
--   **[VAR_005246](https://web.expasy.org/variant_pages/VAR_005246.html) (5 Publicações)**
-    - [rs80356482](https://www.ncbi.nlm.nih.gov/snp/rs80356482)
-    - [Patogênica](https://www.ncbi.nlm.nih.gov/clinvar?term=((211810[AlleleID])OR(27047[AlleleID])))
-    - [Ensembl](http://www.ensembl.org/Homo_sapiens/Variation/Explore?r=17:42908918-42909918;v=rs80356482;vdb=variation;vf=960112920)
--   **[VAR_005237](https://web.expasy.org/variant_pages/VAR_005237.html) (4 Publicações)**
-    - [rs104894565](https://www.ncbi.nlm.nih.gov/snp/rs104894565)
-    - [Patogênica](https://www.ncbi.nlm.nih.gov/clinvar/variation/12004/?oq=((27043[AlleleID]))&m=NM_000151.4(G6PC1):c.113A%3ET%20(p.Asp38Val))
-    - [Ensembl](https://www.ncbi.nlm.nih.gov/clinvar/variation/12004/?oq=((27043[AlleleID]))&m=NM_000151.4(G6PC1):c.113A%3ET%20(p.Asp38Val))
-
-#### NMSIM PDB 97JV
-[LINK 97JV NATIVA](https://cpclab.uni-duesseldorf.de/nmsim/results/7mSURtgxwdyM4rb/)
-
-***Seleção de Melhor Modelo de AlphaFold com RevelioPlots***
-fold_a83c_9j7v_model_0.cif
-
-[LINK 9J7V VAR_005239](https://cpclab.uni-duesseldorf.de/nmsim/results/SLyyhdWE1YNTCUd/)
-
-***Ambas sem numeração em MODEL***
 
 
 
