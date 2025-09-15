@@ -45,6 +45,9 @@ Associada ao mal funcionamento de uma **sub-unidade** da G6P codificada pelo gen
 - PDB: [97JV](https://www.rcsb.org/structure/9J7V)
   - Recentemente submetida (2025). [https://www.pnas.org/doi/10.1073/pnas.2418316122]
 - AlphaFoldDB: [AF-P35575-F1-v4](https://alphafold.ebi.ac.uk/entry/P35575)
+
+**NOTA:** Baixa Confiança **(pLDDT)** nos últimos 5 aa da estrutura gerada pelo AF (que são os 5 aa faltantes das estruturas encontradas no PDB). 
+
  
 ***NOTA:*** Existe uma divergencia entre o número de aa existentes na versão final da subunidade. UniProt não indica nenhum ponto de clivagem (nem mesmo da posição 1), enquanto os arquivos PDB possuem 352 aa, onde os faltantes são do N-terminal. Vou usar tanto o arquivo pdb nativo quanto o modelado do **AlphaFold** para os testes. 
 
@@ -74,6 +77,12 @@ fold_a83c_9j7v_model_0.cif
 ***Ambas sem numeração em MODEL***
 
 #### NMSIM AF-P35575-F1-v4 (Análise com estrutura AlphaFold)
+
+[LINK P35575 NATIVA](https://cpclab.uni-duesseldorf.de/nmsim/results/nlTRgLQvWOFeI/)
+
+***Seleção de Melhor Modelo de AlphaFold com RevelioPlots***
+fold_p35575_a83c_model_0.cif
+[LINK P35575 VAR_005239](https://cpclab.uni-duesseldorf.de/nmsim/results/glWQPtWqgWX9czi/)
 
 
 
