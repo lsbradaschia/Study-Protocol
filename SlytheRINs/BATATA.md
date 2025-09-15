@@ -198,6 +198,8 @@ MODEL
 
 
 
+---
+
 ***ANOTAÇÕES GERAIS ABAIXO***
 ---
 ### Busca de Moléculas Associadas por busca bibliográfica
