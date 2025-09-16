@@ -2,7 +2,9 @@
 
 ## UNIX
 
-### Utilizando RING 4.0 a partir de (.tgz) em computador Windows usando VSCode e Git Bash
+### Utilizando Ferramenta a partir de arquivo no VSCode uasndo Git Bash
+***NOTA:*** É possível rodar a ferramenta no seu computador usando o Git Bash, **MAS** a ferramenta tem que ter uma formatação compatível/ou alguma forma de construção/manutenção da ferramenta que permita que ela seja utilizada em dependências Windows. Se ela for única e exclusivamente LINUX, é necessário acessar um servidor Linux ou ter um Dual Boot pra rodar. 
+
 
 #### 1. Abrir Local de Arquivo de Interesse
 Ctrl K + Ctrl O
@@ -14,7 +16,7 @@ Ctrl + Shit + P -> Escolha a opção "Create new Terminal (With Profile)"; segui
 
 Utilizar o Git Bash permite que você utilize comandos UNIX mesmo que o seu computador seja Windows, dentro do VSCode. É um espécie de dual boot sem a necessidade de baixar o dual boot do Windows. 
 
-#### 3. Descompactando o arquivo RING
+#### 3. Descompactando o arquivo da ferramenta
 
 ```bash
 
@@ -22,7 +24,7 @@ tar -xzvf ring-4.0.tgz #caso esteja já no diretório onde se encontrao o arquiv
 
 #Fora do diretório
 
-tar -xzvf /caminho/para/o/diretório/ring-4.0.tgz
+tar -xzvf /caminho/para/o/diretório/ferramenta.tgz
 
 #Entre no diretório descompactado
 
