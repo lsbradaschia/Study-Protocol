@@ -53,20 +53,26 @@ Associada ao mal funcionamento de uma **sub-unidade** da G6P codificada pelo gen
 
 
 Selecionei 3 variantes que possuem os maiores números de publicação a respeito:
-- 	**[VAR_005239/p.Arg84CysR3C](https://web.expasy.org/variant_pages/VAR_005239.html#) (12 Publicações)**
+- 	**[VAR_005239/p.Arg84Cys](https://web.expasy.org/variant_pages/VAR_005239.html#) (12 Publicações)**
     - [rs1801175](https://www.ncbi.nlm.nih.gov/snp/rs1801175)
     - [Patogênica](https://www.ncbi.nlm.nih.gov/clinvar?term=((2749251[AlleleID])OR(27037[AlleleID])))
     - [Ensembl](http://www.ensembl.org/Homo_sapiens/Variation/Explore?r=17:42903447-42904447;v=rs1801175;vdb=variation;vf=959569854)
  **Nota:** Variante mais comum entre judeus com frequência de 1.4% da população Ashkenazi judaica. 
       
--   **[VAR_005246](https://web.expasy.org/variant_pages/VAR_005246.html) (5 Publicações)**
+-   **[VAR_005246/Gly188Arg](https://web.expasy.org/variant_pages/VAR_005246.html) (5 Publicações)**
     - [rs80356482](https://www.ncbi.nlm.nih.gov/snp/rs80356482)
     - [Patogênica](https://www.ncbi.nlm.nih.gov/clinvar?term=((211810[AlleleID])OR(27047[AlleleID])))
     - [Ensembl](http://www.ensembl.org/Homo_sapiens/Variation/Explore?r=17:42908918-42909918;v=rs80356482;vdb=variation;vf=960112920)
+ **Nota:** c.562G>C (p.Gly188Arg). 1 of 3 variants that comprise 21% of pathogenic variants in individuals of European ancestry. (conforme escrito na seguinte [tabela]()).
+      
 -   **[VAR_005237](https://web.expasy.org/variant_pages/VAR_005237.html) (4 Publicações)**
     - [rs104894565](https://www.ncbi.nlm.nih.gov/snp/rs104894565)
     - [Patogênica](https://www.ncbi.nlm.nih.gov/clinvar/variation/12004/?oq=((27043[AlleleID]))&m=NM_000151.4(G6PC1):c.113A%3ET%20(p.Asp38Val))
     - [Ensembl](https://www.ncbi.nlm.nih.gov/clinvar/variation/12004/?oq=((27043[AlleleID]))&m=NM_000151.4(G6PC1):c.113A%3ET%20(p.Asp38Val))
+ 
+
+Outras que podem ser interessantes considerando a seguinte [tabela]() são: 
+1. c.1039C>T **(p.Gln347Ter)**. 1 of 3 variants that comprise 21% of pathogenic variants in individuals of European ancestry.
 
 #### NMSIM PDB 97JV
 [LINK 97JV NATIVA](https://cpclab.uni-duesseldorf.de/nmsim/results/7mSURtgxwdyM4rb/)
