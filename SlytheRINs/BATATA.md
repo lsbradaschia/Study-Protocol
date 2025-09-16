@@ -50,8 +50,9 @@ Associada ao mal funcionamento de uma **sub-unidade** da G6P codificada pelo gen
 **NOTA:** Baixa Confiança **(pLDDT)** nos últimos 5 aa da estrutura gerada pelo AF (que são os 5 aa faltantes das estruturas encontradas no PDB). 
 
  
-***NOTA:*** Existe uma divergencia entre o número de aa existentes na versão final da subunidade. UniProt não indica nenhum ponto de clivagem (nem mesmo da posição 1), enquanto os arquivos PDB possuem 352 aa, onde os faltantes são do N-terminal. Vou usar tanto o arquivo pdb nativo quanto o modelado do **AlphaFold** para os testes. 
+***NOTA:*** Existe uma divergencia entre o número de aa existentes na versão final da subunidade. UniProt não indica nenhum ponto de clivagem (nem mesmo da posição 1), enquanto os arquivos PDB possuem 352 aa, onde os faltantes são do N-terminal. Vou usar tanto o arquivo pdb nativo quanto o modelado do **AlphaFold** para os testes.
 
+---
 
 Selecionei 3 variantes que possuem os maiores números de publicação a respeito:
 - 	**[VAR_005239/p.Arg84Cys](https://web.expasy.org/variant_pages/VAR_005239.html#) (12 Publicações)**
@@ -74,6 +75,8 @@ Selecionei 3 variantes que possuem os maiores números de publicação a respeit
 
 Outras que podem ser interessantes considerando a seguinte [tabela]() são: 
 1. c.1039C>T **(p.Gln347Ter)**. 1 of 3 variants that comprise 21% of pathogenic variants in individuals of European ancestry.
+
+---
 
 #### NMSIM PDB 9J7V
 [LINK 97JV NATIVA](https://cpclab.uni-duesseldorf.de/nmsim/results/7mSURtgxwdyM4rb/)
@@ -110,6 +113,10 @@ fold_p35575_g188r_model_0.cif
 
 **NOTA1:** Todos os arquivos de estrutura em formato `.cif` foram formatados para `.pdb` utilizando o **PyMol**. 
 
+---
+### HufflePlots e SlytheRINs com NMSIM
+
+(16/09/2025) - todas as moléculas acima com trajetória no NMSIM e já com informações de Nós e Arestas. 
 
 ### Script Python para .csv concatenando RMSD e RMSF para plotagem no [HufflePlots](https://protplots.streamlit.app/)
 
