@@ -90,6 +90,9 @@ fold_g188r_9j7v_model_0.cif
 
 ***Ambas sem numeração em MODEL***
 
+#### NMSIM PDB 9J7U - Mutação Missense H176A
+[LINK 9J7U](https://cpclab.uni-duesseldorf.de/nmsim/results/DQimODF5ZGqOrKI/)
+
 #### NMSIM AF-P35575-F1-v4 (Análise com estrutura AlphaFold)
 
 [LINK P35575 NATIVA](https://cpclab.uni-duesseldorf.de/nmsim/results/nlTRgLQvWOFeI/)
