@@ -43,6 +43,7 @@ Associada ao mal funcionamento de uma **sub-unidade** da G6P codificada pelo gen
 - OMIM: [232200](https://www.omim.org/entry/232200); [613742](https://www.omim.org/entry/613742?search=gsd1a&highlight=gsd1a)
 - ClinVar: [613742[MIM]](https://www.ncbi.nlm.nih.gov/clinvar/?term=613742[MIM])
 - PDB: [97JV](https://www.rcsb.org/structure/9J7V)
+- PDB COM MUTAÇÃO MISSENSE H176A: [9J7U](https://www.rcsb.org/structure/9J7U)
   - Recentemente submetida (2025). [https://www.pnas.org/doi/10.1073/pnas.2418316122]
 - AlphaFoldDB: [AF-P35575-F1-v4](https://alphafold.ebi.ac.uk/entry/P35575)
 
