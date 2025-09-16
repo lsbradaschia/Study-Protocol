@@ -77,10 +77,15 @@ Outras que podem ser interessantes considerando a seguinte [tabela]() são:
 #### NMSIM PDB 97JV
 [LINK 97JV NATIVA](https://cpclab.uni-duesseldorf.de/nmsim/results/7mSURtgxwdyM4rb/)
 
-***Seleção de Melhor Modelo de AlphaFold com RevelioPlots***
+***Seleção de Melhor Modelo de AlphaFold de estrutura 97JV com mutação missense R83C com RevelioPlots***
 fold_r83c_9j7v_model_0.cif
 
 [LINK 9J7V VAR_005239](https://cpclab.uni-duesseldorf.de/nmsim/results/SLyyhdWE1YNTCUd/)
+
+***Seleção Melhor Estrutura AF de 97JV com mutação missense G188R com RevelioPlots***
+fold_g188r_9j7v_model_0.cif
+
+[LINK 9J7V_VAR005246/GLY188ARG](https://cpclab.uni-duesseldorf.de/nmsim/results/LwhkskQP32aE6kS/)
 
 ***Ambas sem numeração em MODEL***
 
@@ -88,16 +93,18 @@ fold_r83c_9j7v_model_0.cif
 
 [LINK P35575 NATIVA](https://cpclab.uni-duesseldorf.de/nmsim/results/nlTRgLQvWOFeI/)
 
-***Seleção de Melhor Modelo de AlphaFold com RevelioPlots***
-
-
+****Seleção de Melhor Modelo de AlphaFold de estrutura predita P35575 com mutação missense R83C com RevelioPlotss***
 fold_p35575_r83c_model_0.cif
-
 
 [LINK P35575 VAR_005239](https://cpclab.uni-duesseldorf.de/nmsim/results/glWQPtWqgWX9czi/)
 
+****Seleção de Melhor Modelo de AlphaFold de estrutura predita P35575 com mutação missense G188R com RevelioPlots***
+fold_p35575_g188r_model_0.cif
+
+[LINK P35575_VAR005246/GLY188ARG](https://cpclab.uni-duesseldorf.de/nmsim/results/Ie5ZF79YvFzxBEe/)
 
 
+**NOTA1:** Todos os arquivos de estrutura em formato `.cif` foram formatados para `.pdb` utilizando o **PyMol**. 
 
 
 ### Script Python para .csv concatenando RMSD e RMSF para plotagem no [HufflePlots](https://protplots.streamlit.app/)
