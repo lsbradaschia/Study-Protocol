@@ -74,7 +74,7 @@ Selecionei 3 variantes que possuem os maiores números de publicação a respeit
 Outras que podem ser interessantes considerando a seguinte [tabela]() são: 
 1. c.1039C>T **(p.Gln347Ter)**. 1 of 3 variants that comprise 21% of pathogenic variants in individuals of European ancestry.
 
-#### NMSIM PDB 97JV
+#### NMSIM PDB 9J7V
 [LINK 97JV NATIVA](https://cpclab.uni-duesseldorf.de/nmsim/results/7mSURtgxwdyM4rb/)
 
 ***Seleção de Melhor Modelo de AlphaFold de estrutura 97JV com mutação missense R83C com RevelioPlots***
