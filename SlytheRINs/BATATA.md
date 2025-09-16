@@ -109,6 +109,8 @@ fold_p35575_g188r_model_0.cif
 
 ### Script Python para .csv concatenando RMSD e RMSF para plotagem no [HufflePlots](https://protplots.streamlit.app/)
 
+#### O script utilizado com todas as moléculas de G6PC1 pode ser encontrado no seguinte [notebook](https://colab.research.google.com/drive/1Zei5wjCCmyEt5zComs4C18PR3lzTgWhG#scrollTo=Y-PtDA7LYMBM) do Colab.
+
 ```python
 
 #Bibliotecas
@@ -116,15 +118,16 @@ import pandas as pd
 
 # Lista com arquivos '.txt' correspondentes a RMSD e RMSF
 ## Substitua pelos seus próprios arquivos, ou posteriormente modificar o código para ler de um diretório +metadado pra nomenclatura
-
+### RMSD
 files_rmsd = [
-    ('/content/9J7V_rmsdtostart.txt', 'G6PC1_WT'),
-    ('/content/fold_a83c_9j7v_rmsdtostart.txt', 'G6PC1_A83C' ),
+    ('/content/exemplo_rmsdtostart.txt', 'NOMEX_WT'), #WT de 'wild-type' form (ex: '9J7V_WT')
+    ('/content/exemplo_mutação_rmsdtostart.txt', 'NOMEX_XXXX' ), #Indico colocar a nomenclatura simplicada da mutação (ex: '9J7V_R83C')
 ]
 
+### RMSF
 files_rmsf = [
-    ('/content/9J7V_rmsfresidue.txt', 'G6PC1_WT'),
-    ('/content/fold_a83c_9j7v_rmsfresidue.txt', 'G6PC1_A83C'),
+    ('/content/exemplo_rmsfresidue.txt', 'NOMEX_WT'),
+    ('/content/exemplo_mutação_rmsfresidue.txt', 'NOMEX_XXXX'),
 ]
 
 
