@@ -53,10 +53,12 @@ Associada ao mal funcionamento de uma **sub-unidade** da G6P codificada pelo gen
 
 
 Selecionei 3 variantes que possuem os maiores números de publicação a respeito:
-- 	**[VAR_005239](https://web.expasy.org/variant_pages/VAR_005239.html#) (12 Publicações)**
+- 	**[VAR_005239/p.Arg84CysR3C](https://web.expasy.org/variant_pages/VAR_005239.html#) (12 Publicações)**
     - [rs1801175](https://www.ncbi.nlm.nih.gov/snp/rs1801175)
     - [Patogênica](https://www.ncbi.nlm.nih.gov/clinvar?term=((2749251[AlleleID])OR(27037[AlleleID])))
     - [Ensembl](http://www.ensembl.org/Homo_sapiens/Variation/Explore?r=17:42903447-42904447;v=rs1801175;vdb=variation;vf=959569854)
+ **Nota:** Variante mais comum entre judeus com frequência de 1.4% da população Ashkenazi judaica. 
+      
 -   **[VAR_005246](https://web.expasy.org/variant_pages/VAR_005246.html) (5 Publicações)**
     - [rs80356482](https://www.ncbi.nlm.nih.gov/snp/rs80356482)
     - [Patogênica](https://www.ncbi.nlm.nih.gov/clinvar?term=((211810[AlleleID])OR(27047[AlleleID])))
@@ -70,7 +72,7 @@ Selecionei 3 variantes que possuem os maiores números de publicação a respeit
 [LINK 97JV NATIVA](https://cpclab.uni-duesseldorf.de/nmsim/results/7mSURtgxwdyM4rb/)
 
 ***Seleção de Melhor Modelo de AlphaFold com RevelioPlots***
-fold_a83c_9j7v_model_0.cif
+fold_r83c_9j7v_model_0.cif
 
 [LINK 9J7V VAR_005239](https://cpclab.uni-duesseldorf.de/nmsim/results/SLyyhdWE1YNTCUd/)
 
@@ -83,7 +85,7 @@ fold_a83c_9j7v_model_0.cif
 ***Seleção de Melhor Modelo de AlphaFold com RevelioPlots***
 
 
-fold_p35575_a83c_model_0.cif
+fold_p35575_r83c_model_0.cif
 
 
 [LINK P35575 VAR_005239](https://cpclab.uni-duesseldorf.de/nmsim/results/glWQPtWqgWX9czi/)
