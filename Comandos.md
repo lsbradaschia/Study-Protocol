@@ -52,3 +52,28 @@ export PATH=$PATH://d/Usuários/Público/Documentos Públicos/Academico/PPG_Bioi
 ```
 
 Para salvar o comando em bash, escreva **CTRL+O**, depois **CTRL+X**. 
+
+
+---
+
+### Instalação de Conda no Servidor (a partir do .sh do MiniConda) 
+
+```bash
+#Baixar o bash apropriado do Miniconda para o servidor
+##Usando wget:
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+#Rodar o script bash do Miniconda
+
+bash Miniconda3-latest-Linux-x86_64.sh
+
+##NOTA: Se for em servidor de acesso de mais pessoas, baixe e instale o miniconda NO SEU DIRETÓRIO. NÃO INSTALE NA HOME ou em qualquer outro diretório antes do seu diretório. Durante a instalação, será perguntando e sugerido a criação de um diretório miniconda dentro do diretório atual em que está sendo instalado para que a mesma seja finalizada. Se atente ao diretório em que está fazendo a instalação.
+
+##NOTA2: Caso queira a ativação automática do conda ao acessar o servidor, selecione **YES** na última seleção durante a instalação se tratando de activate/deactivate. Ele irá escrever no bash base do seu diretório (no meu caso, bashrc) uma especificação para ativação do conda automática. Caso queira ativar isso assim que instalar, use o seguinte comando:
+
+source ./bashrc #ou o seu código fonte do diretório
+
+
+
+
+```
