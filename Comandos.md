@@ -77,3 +77,27 @@ source ./bashrc #ou o seu código fonte do diretório
 
 
 ```
+
+---
+
+## Python
+
+### Salvar output completo do BioEmu no drive
+
+Após a análise de BioEmu ser completa, abra uma nova aba de código e conecto o seu ambiente do drive:
+```python
+
+from google.colab import drive
+drive.mount('/content/drive')
+
+```
+
+Após conectado, use `!cp` para copiar os diretórios de interesse para uma pasta do drive
+```python
+# -r para copiar a pasta e todo o seu conteúdo
+# /content/sua_pasta é a origem
+# /content/drive/MyDrive/ é o destino (raiz do seu "Meu Drive")
+# Você pode especificar uma subpasta, ex: /content/drive/MyDrive/Colab_Outputs/
+!cp -r /content/sua_pasta /content/drive/MyDrive/
+
+```
