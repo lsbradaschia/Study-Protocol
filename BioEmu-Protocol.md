@@ -97,9 +97,17 @@ Os diretórios do `foldseek` e `cg_coefficients` são diretórios de chamada de 
 Ainda no Colab Notebok do BioEmu, adicione duas abas de código com os seguintes scripts: 
 
 ```python
+#Monte seu drive
+from google.colab import drive
+drive.mount('/content/drive')
 
 ```
 
 ```python
+#Copie as pastas pro drive
+!cp -r /content/[sua_amostra]_cc11a /content/drive/MyDrive/
+!cp -r /content//pdb_samples /content/drive/MyDrive/
 
+##Nota: Eu indico criar e direcionar esses arquivos pra uma pasta específica lá dentro, pra não se perderem lá dentro. Você vai precisar baixar alguns dos arquivos pro seu computador ou pra um servidor, então é interessante ter eles de fácil acesso.
+##Nota2: Não fecha o Google Colab assim que esse comando rodar, porque demora um tempo pra todos os arquivos serem copiados pro seu drive. ESPERE COPIAR TUDO, porque não vai sobrar CPU pra refazer a análise, e vai ter que esperar até o dia seguinte. Não queremos isso :') 
 ```
