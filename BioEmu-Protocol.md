@@ -29,7 +29,7 @@ Em outro momento, descrevo melhor quanto ao que se trata a fundo o BioEmu, vou f
 
 Após alguns teste, consegui chegar num limiar de **200** conformações geradas pra proteína que estou utilizando pra estudo atualmente pro teste BATATA (G6PC1), onde um pouco mais de
 200 conformações (entre 230), é suficiente pra esgotar todo o GPU disponível gratuitamente pelo Google Colab que pode ser usado diariamente. Como o objetivo é justamente testar a 
-ferramenta, optei por seguir a análise com o BioEmu com o padrão de **200** conformações pra ***3 PROTEÍNAS: 97JV-WT (G6PC1 nativa); P7JV-H176A e P7JV-R83C***. 
+ferramenta, optei por seguir a análise com o BioEmu com o padrão de **200** conformações pra ***3 PROTEÍNAS: 97JV-WT (G6PC1 nativa); P7JV-H176A e P7JV-R83C*** (352aa, monômero). 
 
 Usei meus 3 usuários/e-mails da google, onde abri uma aba do [Colab do BioEmu]() com cada uma das protéinas, onde levaram aproximadamente 30-40 minutos para serem completamente processadas
 (opção Executar tudo no Google Colab). Vale ressaltar que não foi bastante demorado (considerando qualquer tipo de simulação de dinâmica molecular, a limitação fica voltada ao CPU
