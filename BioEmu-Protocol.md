@@ -6,9 +6,17 @@ Como o objetivo é testar a ferramenta, rodei sem conectar em nenhum servidor ex
 
 ### Informações Gerais
 [GitHub](https://github.com/microsoft/bioemu)
+
+
 [Hugging Face](https://huggingface.co/microsoft/bioemu)
+
+
 [PrePrint](https://www.biorxiv.org/content/10.1101/2024.12.05.626885v2)
+
+
 [Paper Publicado - fechado](https://www.science.org/doi/abs/10.1126/science.adv9817)
+
+
 
 A ferramenta oficial é feita pra rodar utilizando `pip install`em bash, apenas em Unix. Mas também tem a opção de utilizar diretamente em um [colab notebook](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/BioEmu.ipynb) disponível graças ao 
 [ColabFold](https://github.com/sokrypton/ColabFold). 
