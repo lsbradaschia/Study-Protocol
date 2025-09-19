@@ -37,9 +37,61 @@ explica bastante coisa).
 Por default **estruturas fisico-quimicamente impossíveis de existir** são deletadas, então é bem comum o número de estruturas final não ser exatamente o número inicialmente proposto
 (dá pra mudar isso, mas não era do interesse nesse caso). Essa etapa gera o primeiro output do BioEmu, que são: 
 
-- **Arquivos `.pdb` individuais para cada uma das (n) conformações que foram preditas como parte do ensembl.** É gerada uma **pasta** chamada `pdb_samples` onde terão por volta de (no meu caso)
-- 200 arquivos .pdb, exceto os que foram retirados por serem fisicamente impróprias. 
+- **Arquivos `.pdb` individuais para cada uma das (n) conformações que foram preditas como parte do ensembl.** É gerada uma **pasta** chamada `pdb_samples` onde terão por volta de (no meu caso) 200 arquivos .pdb, exceto os que foram retirados por serem fisicamente impróprias.
+- 
 
-É a partir do `FoldSeek` que o BioEmu simula a trajetória da proteína. Ele utiliza da função de clusterização do FoldSeek pra agrupar estruturas similares, e a partir disso ele é
-capaz de gerar 
+Os arquivos .pdb são utilizados para posterior clusterização e simulação de trajetória. É a partir do `FoldSeek` que o BioEmu simula a trajetória da proteína. Ele utiliza da função de clusterização do FoldSeek pra agrupar estruturas similares (os pdbs previamente gerados), e então são gerados os arquivos de **TRAJETÓRIA** e arquivos de **TOPOLOGIA** associados. Um ponto a ressaltar é que, por default, a estrutura **representativa** de cada cluster gerado pelo FoldSeek é individualmente arquivada tanto em arquivos de trajetória quanto de topologia. Um arquivo `json` é gerado apontando quantos clusters foram gerados, e quais amostras pertencem a cada um deles. 
 
+```bash
+#Exemplo do arquivo .json aberto com um less no terminal
+
+{"0": ["sample_0", "sample_1", "sample_10", "sample_100", "sample_101", "sample_102", "sample_103", "sample_104", "sample_105", "sample_106", "sample_107", "sample_108", 
+"sample_109", "sample_11", "sample_110", "sample_111", "sample_112", "sample_113", "sample_114", "sample_115", "sample_116", "sample_117", "sample_118", "sample_119", 
+"sample_12", "sample_120", "sample_121", "sample_122", "sample_123", "sample_124", "sample_125", "sample_126", "sample_127", "sample_128", "sample_129", "sample_13", 
+"sample_130", "sample_131", "sample_132", "sample_133", "sample_134", "sample_135", "sample_136", "sample_137", "sample_138", "sample_139", "sample_14", "sample_140", 
+"sample_141", "sample_142", "sample_143", "sample_144", "sample_145", "sample_146", "sample_147", "sample_148", "sample_149", "sample_15", "sample_150", "sample_151", 
+"sample_152", "sample_153", "sample_154", "sample_155", "sample_156", "sample_157", "sample_158", "sample_159", "sample_16", "sample_160", "sample_161", "sample_162", 
+"sample_163", "sample_164", "sample_165", "sample_166", "sample_167", "sample_168", "sample_169", "sample_17", "sample_170", "sample_171", "sample_172", "sample_173",
+ "sample_174", "sample_175", "sample_176", "sample_177", "sample_178", "sample_179", "sample_18", "sample_180", "sample_181", "sample_182", "sample_183", "sample_184", 
+ "sample_185", "sample_186", "sample_187", "sample_188", "sample_189", "sample_19", "sample_190", "sample_191", "sample_192", "sample_193", "sample_194", "sample_195", 
+ "sample_196", "sample_197", "sample_2", "sample_20", "sample_21", "sample_22", "sample_23", "sample_24", "sample_25", "sample_26", "sample_27", "sample_28", "sample_29", 
+ "sample_3", "sample_30", "sample_31", "sample_32", "sample_33", "sample_34", "sample_35", "sample_36", "sample_37", "sample_38", "sample_39", "sample_4", "sample_40", 
+ "sample_41", "sample_42", "sample_43", "sample_44", "sample_45", "sample_46", "sample_47", "sample_48", "sample_49", "sample_5", "sample_50", "sample_51", "sample_52", 
+ "sample_53", "sample_54", "sample_55", "sample_56", "sample_57", "sample_58", "sample_59", "sample_6", "sample_60", "sample_61", "sample_62", "sample_63", "sample_64", 
+ "sample_65", "sample_66", "sample_67", "sample_68", "sample_69", "sample_7", "sample_70", "sample_71", "sample_72", "sample_73", "sample_74", "sample_75", "sample_76", 
+ "sample_77", "sample_78", "sample_79", "sample_8", "sample_80", "sample_81", "sample_82", "sample_83", "sample_84", "sample_85", "sample_86", "sample_87", "sample_88", 
+ "sample_89", "sample_9", "sample_90", "sample_91", "sample_92", "sample_93", "sample_94", "sample_95", "sample_96", "sample_97", "sample_98", "sample_99"]}
+
+```
+
+
+No caso de apenas 1 cluster gerado pelo FoldSeek (todas as suas estruturas pertencendo a um único ensembl, conforme o exemplo), apenas 1 estrutura será determinada como representante do cluster. Em casos de mais clusters, cada um terá 1 estrutura representante. 
+
+### Diretórios Gerados e Formatos de Outputs
+
+Explicando cada um dos Arquivos e Pastas que são gerados pelo BioEmu, 4 pastas serão geradas ao final da análise, sendo elas: 
+
+```bash
+
+├── /9J7V-WT
+│   ├──/9J7V_cc11a
+│   ├──/cg_coefficients
+│   └──/foldseek
+│   └──/pdb_samples
+└── 
+
+
+```
+Os diretórios do `foldseek` e `cg_coefficients` são diretórios de chamada de ferramentas para processamento da análise feita pelo BioEmu, e não possuem nenhum arquivo significativo. Já os diretórios `9J7V_cc11a` e `pdb_samples` vão conter os dados de trajetória, topologia e cada um dos arquivos .pdb gerados. 
+
+**Para baixar as pastas do Colab Notebook pro seu drive**
+
+Ainda no Colab Notebok do BioEmu, adicione duas abas de código com os seguintes scripts: 
+
+```python
+
+```
+
+```python
+
+```
