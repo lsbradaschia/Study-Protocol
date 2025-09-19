@@ -148,6 +148,7 @@ Uma explicação breve dos arquivos e seus significados:
 - `clustered_topology.pdb`: arquivo de *topologia* referente a/as **estrutura(s) representante(s) do cluster(s)**. Em caso de uniformidade, esse arquivo será idêntico ao `topology.pdb`.
 - `hpacker-openmm/`: esse diretório contém os dados de trajetória e topologia da etapa *opcional* do BioEmu de ` Reconstruct sidechains + Run MD relaxation`. Como é opcional, eu vou explicar depois de passar por todo o processo principal. 
 
+Com esses arquivos, é possível adquirir informações de RMSD, RMSF e (**ainda nao executado**) posterior análise do RING com as trajetórias geradas. Mas pra essa etapa, precisaremos utilizar um servidor LINUX (seja teu computador ou conectar a um servidor). Então é interessante baixar **os arquivos definidos acima** para o seu computador. Eu optei por primeiro fazer o upload pro drive e depois baixar pro meu pc (por questões de saber montar o drive no colab notebook). Eu vou deixar aqui o script que eu usei pra fazer isso, mas é livre fazer como quiserem. 
 
 
 **Para baixar as pastas do Colab Notebook pro seu drive**
