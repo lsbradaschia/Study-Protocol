@@ -211,3 +211,33 @@ Você consegue saber que está conectado a um ambiente específico facilmente, q
 (gromacs) laura.shimohara@alemanha:~$ 
 
 ```
+### RMSD com GROMACS/BioEmu
+
+```bash
+#Comando 1: Variabilidade do ensemble completo EM RELAÇÃO Á ESTRUTURA INICIAL QUERY
+
+gmx rms -s topology.pdb -f samples.xtc -o ensembl-rmsd
+
+#Comando 2: Variabilidade do ensemble completo EM RELAÇÃO À ESRTUTURA REPRESENTANTE DO CLUSTER (clustered_samples/clustered_topology)
+
+gmx rms -s clustered_topology.pdb -f samples.xtc -o cluster-rmsd
+
+```
+***APÓS RODAR CADA UM DESSES COMANDOS, GROMACS PEDIRÁ PARA SELECIONAR ENTRE ALGUMAS OPÇÕES O: (I)LEAST SQUARE FIT E (II)GROUP FOR OUTPUT.***
+Escolha a opção ***4*** para ambas, de `BACKBONE`. É o recomendado no [Tutorial do Gromacs](http://www.mdtutorials.com/gmx/lysozyme/09_analysis.html)
+
+`LEAST SQUARE FITTING`: Seleção de estrutura estável para representar o fold de referência para o cálculo do RMSD. Por isso a escolha do Backbone
+`GROUP FOR OUTPUT`: Grupo final de cálculo do RMSD. Quando se analisa a **estabilidade** da protéina, escolhe-se 4:('Backbone'). Para **desvio total** da proteína, sugerem utilizar 4:('Backbone') como LEAST SQUARE FIT e 2:('Protein') para GROUP FOR OUTPUT.
+
+***USAMOS 4, E APENAS 4. FAÇAMOS TUDO CONTRA O BACKBONE*** (até segunda ordem). 
+
+### RMSF 
+```bash
+
+gmx rmsf -s topology.pdb -f samples.xtc -o example-rmsf -res
+#não esqueçam o parâmetro -res no final, ele é essencial para medir a flutuaçãoa nível de resíduo.
+
+```
+***PRO RMSF, SÓ SE PEDE O LEAST SQUARE FIT. É 4:('BACKBONE')***
+
+Parabéns, temos agora trajetória, rmsd e rmsf! 
