@@ -170,3 +170,42 @@ drive.mount('/content/drive')
 ##Nota: Eu indico criar e direcionar esses arquivos pra uma pasta no drive, pra não se perderem lá dentro. Você vai precisar baixar alguns dos arquivos pro seu computador ou diretamento pro servidor posteriormente, então é interessante ter eles de fácil acesso.
 ##Nota2: NÃO FECHE o Google Colab assim que esse comando rodar, porque demora um tempo pra todos os arquivos serem copiados pro seu drive. ESPERE COPIAR TUDO, porque não vai sobrar CPU pra refazer a análise, e vai ter que esperar até o dia seguinte. Não queremos isso :') 
 ```
+---
+
+## GROMACS - Adquirindo RMSD/RMSF dos outputs do BioEmu
+
+Todo o processo foi feito pelo VSCode, o que facilita bastante o processo de copiar/colar arquivos do computador pro servidor. Caso você seja como eu (computador Windows, conectando a um servidor Linux), eu recomendo que faça o mesmo. 
+
+Pra utilizar o `GROMACS`, eu o instalei utilizando `conda`. Eu to montando um bloco geral de comandos do conda [aqui](https://github.com/lsbradaschia/Study-Protocol/blob/main/Comandos.md), caso nunca tenham usado. É bastante simples de usar, só ressalto a importância de **criar ambientes específicos para cada ferramenta**, o que vou colocar o script de como faz aqui embaixo. 
+
+**NOTA:** Não vou explicar aqui como baixar o conda em servidor, mas tá explicado no link de comandos. 
+
+```bash
+#criando um ambiente conda
+##caso conda não esteja ativado, ative
+
+conda activate
+
+#crie um ambiente específico pra ferramenta
+conda create -n 'nome da ferramenta' 
+#ex: conda create -n gromacs
+##Esse comando cria um ambiente isolado com um nome definido por você. É interessante pra poder instalar todas as dependências necessárias pra uma ferramenta sem que altere ou prejudique nenhuma outra dependência do próprio computador/servidor, ou de outra ferramenta.
+
+#Para acessar o ambiente criado
+conda activate 'nomedoambiente'
+#ex: conda activate gromacs
+
+#Lista de todos os ambientes criados no conda (bom pra relembrar o nome do ambiente de alguma ferramenta)
+conda env list
+
+```
+
+Você consegue saber que está conectado a um ambiente específico facilmente, que aparece o nome do ambiente que você está conectado antes do nome do seu usuário no servidor:
+
+```bash
+
+#Conectada ao conda, mas fora do ambiente do gromacs
+
+
+
+```
