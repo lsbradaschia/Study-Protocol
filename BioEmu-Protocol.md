@@ -125,7 +125,6 @@ O diretório se apresenta no seguinte padrão:
 ├── /9J7V_cc11a
 │   ├── foldseek_clusters.json
 │   ├── sequence.fasta
-│   ├── sequence.fasta
 │   ├── samples.xtc
 │   ├── topology.pdb
 │   ├── clustered_samples.xtc
@@ -139,6 +138,15 @@ O diretório se apresenta no seguinte padrão:
 
 ```
 
+Uma explicação breve dos arquivos e seus significados: 
+
+- `foldseek_clusters.json`: representado anteriormente, esse arquivo define quantos clusters foram formados pelo foldseek, e quais `samples` estão presente em cada um deles.
+- `sequence.fasta`: arquivo fasta com a sequência da protéina query na qual se baseia a análise.
+- `samples.xtc`: arquivo de *trajetória* referente a **todas as estruturas**, ou seja, referente ao ensemble da protéina query.
+- `topology.pdb`: arquivo de *topologia* referente ao arquivo de trajetória `samples.xtc`. Traça a topologia padrão das estruturas do ensemble retratado na trajetória.
+- `clustered_samples.xtc`: arquivo de *trajetória* referente a/as **estrutura(s) representante(s) do cluster(s)**. Apenas uma estrutura de cada cluster é armazenada; em caso de uniformidade - um cluster gerado - apenas uma estrutura é representada no arquivo.
+- `clustered_topology.pdb`: arquivo de *topologia* referente a/as **estrutura(s) representante(s) do cluster(s)**. Em caso de uniformidade, esse arquivo será idêntico ao `topology.pdb`.
+- `hpacker-openmm/`: esse diretório contém os dados de trajetória e topologia da etapa *opcional* do BioEmu de ` Reconstruct sidechains + Run MD relaxation`. Como é opcional, eu vou explicar depois de passar por todo o processo principal. 
 
 
 
