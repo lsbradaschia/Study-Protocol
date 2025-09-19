@@ -46,7 +46,7 @@ Por default **estruturas fisico-quimicamente impossíveis de existir** são dele
 (dá pra mudar isso, mas não era do interesse nesse caso). Essa etapa gera o primeiro output do BioEmu, que são: 
 
 - **Arquivos `.pdb` individuais para cada uma das (n) conformações que foram preditas como parte do ensembl.** É gerada uma **pasta** chamada `pdb_samples` onde terão por volta de (no meu caso) 200 arquivos .pdb, exceto os que foram retirados por serem fisicamente impróprias.
-- 
+
 
 Os arquivos .pdb são utilizados para posterior clusterização e simulação de trajetória. É a partir do `FoldSeek` que o BioEmu simula a trajetória da proteína. Ele utiliza da função de clusterização do FoldSeek pra agrupar estruturas similares (os pdbs previamente gerados), e então são gerados os arquivos de **TRAJETÓRIA** e arquivos de **TOPOLOGIA** associados. Um ponto a ressaltar é que, por default, a estrutura **representativa** de cada cluster gerado pelo FoldSeek é individualmente arquivada tanto em arquivos de trajetória quanto de topologia. Um arquivo `json` é gerado apontando quantos clusters foram gerados, e quais amostras pertencem a cada um deles. 
 
@@ -81,7 +81,7 @@ Explicando cada um dos Arquivos e Pastas que são gerados pelo BioEmu, 4 pastas 
 
 ```bash
 
-├── /9J7V-WT
+├── /9J7V-WT #essa pasta eu que criei, considerem a partir do 9J7V_cc11a
 │   ├──/9J7V_cc11a
 │   ├──/cg_coefficients
 │   └──/foldseek
@@ -90,7 +90,57 @@ Explicando cada um dos Arquivos e Pastas que são gerados pelo BioEmu, 4 pastas 
 
 
 ```
+
+#### PDB_SAMPLES
+
+Conforme explicado anteriormente, o diretório pdb_samples contém todas as estruturas individuais em formato `.pdb`. Pelo colab, ela é nomeada de forma padrão. O diretório sempre tem como nome `pdb_samples`, e os arquivos com as estruturas no interior são nomeadas `sample_X.pdb`. 
+
+Aqui um exemplo de organização do diretório
+
+```bash
+
+├── /pdb_samples
+│   ├──sample_0.pdb 
+│   ├──sample_1.pdb 
+│   └──sample_2.pdb 
+│   └──sample_3.pdb 
+│   └── ...
+
+```
+
 Os diretórios do `foldseek` e `cg_coefficients` são diretórios de chamada de ferramentas para processamento da análise feita pelo BioEmu, e não possuem nenhum arquivo significativo. Já os diretórios `9J7V_cc11a` e `pdb_samples` vão conter os dados de trajetória, topologia e cada um dos arquivos .pdb gerados. 
+
+#### TRAJETÓRIA E TOPOLOGIA
+
+Os arquivos relacionados a dinâmica molecular estarão no diretório de nome escolhido por você, geralmente referenciando a amostra em que foi feita análise (no caso que uso de exemplo aqui, é 9J7V_cc11a). A interpretação dos formatos de arquivos foram retiradas do [benchmark do BioEmu](https://github.com/microsoft/bioemu-benchmarks/blob/main/README.md#usage), já que não encontrei uma documentação no preprint nem no GitHub do próprio BioEmu. 
+
+**NOTA:** *Esse diretório vai ter uma penca de arquivos em formato `.npz`, gerados pelo numpy durante a análise. **Acredito eu** que eles não vão ser de muita utilidade, já que são uma espécie de array temporário pra viabilizar a análise com o foldseek (pelo que entendi do código), mas mantive eles por agora pra não acabar apagando algo que pode ser interessante de olhar mais pra frente.*
+
+Mas conforme é explicado no `README.md`, no tópico `#usage` do benchmark, o BioEmu gera arquivos em formato `.xtc` para serem interpretados como `mdtraj.Trajectory` (trajetória). Além disso, todo `.xtc` obrigatoriamente é acompanhado por um arquivo de *topologia*. No caso do BioEmu, A topologia é definida por um arquivo em formato `.pdb` onde o nome do arquivo **contém obrigatoriamente topology** escrito, e **encontra-se no mesmo diretório**. 
+
+O diretório se apresenta no seguinte padrão: 
+
+```bash
+
+├── /9J7V_cc11a
+│   ├── foldseek_clusters.json
+│   ├── sequence.fasta
+│   ├── sequence.fasta
+│   ├── samples.xtc
+│   ├── topology.pdb
+│   ├── clustered_samples.xtc
+│   ├── clustered_topology.pdb
+│   ├── /hpacker-openmm/
+│   ├── batch_0000000_0000001.npz
+│   ├── batch_0000001_0000002.npz
+│   └── ...
+└── 
+
+
+```
+
+
+
 
 **Para baixar as pastas do Colab Notebook pro seu drive**
 
