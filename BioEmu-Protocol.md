@@ -205,7 +205,9 @@ Você consegue saber que está conectado a um ambiente específico facilmente, q
 ```bash
 
 #Conectada ao conda, mas fora do ambiente do gromacs
+(base) laura.shimohara@alemanha:~$
 
-
+#Conectada no ambiente gromacs
+(gromacs) laura.shimohara@alemanha:~$ 
 
 ```
