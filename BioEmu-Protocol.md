@@ -259,3 +259,21 @@ gmx trjconv -s topology.pdb -f samples.xtc -o traj.pdb
 ```
 
 ***NESSE CASO, A SELEÇÃO A SER FEITA É DE 0:['System']. Diferente dos comandos anteriores, aqui o interesse é de referência a estrutura completa para computar a trajetória.*** 
+
+### Comando do RING para trajetória
+
+Para rodar a ferramenta do RING em terminal para *todas as conformações da trajetória*, eu utilizei o seguinte comando:
+
+**NOTA1:** É interessante criar um diretório de saída pro output do RING (pra criar um diretório, é só utilizar `mkdir nomedodiretório`), porque caso contrário o output não é gerado em um arquivo, e sim gerado um display (beeeeem longo) do resultado na sua tela do terminal. Crie o diretório (ou coloque como out-dir o próprio diretório que tais rodando a ferramenta). 
+
+```bash
+
+#RING para todas as conformações de .pdb:
+
+ring -i arquivo-de-trajetória.pdb --all_edges --all_models --out_dir diretório-de-escolha
+
+##Exemplo de uso:
+
+ring -i 9J7V_trajectory.pdb --all_edges --all_models --out_dir 9J7V_WT
+
+```
