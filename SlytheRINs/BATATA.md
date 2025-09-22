@@ -71,6 +71,10 @@ Selecionei 3 variantes que possuem os maiores números de publicação a respeit
     - [rs104894565](https://www.ncbi.nlm.nih.gov/snp/rs104894565)
     - [Patogênica](https://www.ncbi.nlm.nih.gov/clinvar/variation/12004/?oq=((27043[AlleleID]))&m=NM_000151.4(G6PC1):c.113A%3ET%20(p.Asp38Val))
     - [Ensembl](https://www.ncbi.nlm.nih.gov/clinvar/variation/12004/?oq=((27043[AlleleID]))&m=NM_000151.4(G6PC1):c.113A%3ET%20(p.Asp38Val))
+
+Variante que possui PDB (9J7U): 
+
+- 
  
 
 Outras que podem ser interessantes considerando a seguinte [tabela]() são: 
