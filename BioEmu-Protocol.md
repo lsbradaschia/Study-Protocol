@@ -243,3 +243,19 @@ gmx rmsf -s topology.pdb -f samples.xtc -o example-rmsf -res
 ***PRO RMSF, SÓ SE PEDE O LEAST SQUARE FIT. É 4:('BACKBONE')***
 
 Parabéns, temos agora trajetória, rmsd e rmsf! 
+
+### Conversão do arquivo `.XTC` para `.PDB` de trajetória para input do RING
+
+A ferramenta do RING só aceita como input arquivos no formato CIF e PDB, então é preciso que seja feita a conversão do arquivo de trajetória pra o formato `.pdb`. Para que mais de uma estrutura seja corretamente computada no arquivo `.pdb`, existe um padrão de escrita específico o quais as regras podem ser encontradas [aqui](https://www.wwpdb.org/documentation/file-format-content/format33/sect9.html#MODEL). Em resumo, cada estrutura tem um padrão de início/fim marcados pelo par de string MODEL/ENDMDL. 'MODEL' indica o início da estrutura e 'ENDML' o fim da estrutura. 
+
+A conversão é feita utilizando também o `GROMACS`, com a utilização `gmx trjcon`: 
+
+```bash
+
+#conversão de .xtc para .pdb da trajetória
+
+gmx trjconv -s topology.pdb -f samples.xtc -o traj.pdb
+
+```
+
+***NESSE CASO, A SELEÇÃO A SER FEITA É DE 0:['System']. Diferente dos comandos anteriores, aqui o interesse é de referência a estrutura completa para computar a trajetória.*** 
