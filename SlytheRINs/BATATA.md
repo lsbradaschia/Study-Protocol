@@ -228,9 +228,53 @@ MODEL
 MODEL
 MODEL
 ```
+### Pipeline de Pré-processamento e Análise de Dados do NMSIM e BioEmu (futuramente GROMACS, que vai ser bem parecido com o do BioEmu, com algumas pequenas alterações em alguns parâmetros 
+
+Eu vou inserir os links de cada um dos executáveis aqui assim que eles estiverem certinhos. Eles estão em um diretório aqui nesse repositório, mas fazendo algumas alterações. Abaixo fica a ordenação das ***ETAPAS DE PROCESSAMENTO*** e comandos associados:
+
+```bash
+
+# 1) MD data (NMSIM/BioEmu/Gromacs)
+## input: PDB/CIF de proteína query. Pré-processamento diverge dependendo da ferramenta utilizada.
+## OUTPUT: I) Arquivo de trajetória (.pdb, .xtc, .gro, ...);
+##         II) Arquivo de Topologia (.pdb, .gro., .topol.top, ...)
+
+
+# 2) RMSD/RMSF ""bruto"" - sem correções de pré-processamento GROMACS
+## NMSIM gera automaticamente cálculo RMSD/RMSF, então não é obrigatória o cálculo pelo GROMACS.
+### Cálculo de RMSD (BioEmu/Gromacs):
+gms rms -s [$TOPOLOGIA] -f [$TRAJETORIA] -o [OUTPUT]
+
+#SELEÇÃO 'GROUP FOR OUTPUT' E 'SQUARE FIT' PRA RMSD: 4('BACKBONE')
+
+
+### Cálculo de RMSF:
+gmx rmsf -s [$TOPOLOGIA] -f [$TRAJETORIA] -o [OUTPUT] -res
+
+#SELEÇÃO 'GROUP FOR OUTPUT' PARA RMSF: '4'('BACKBONE)
+#NOTA: o parâmetro '-res' é essencial para o cálculo RMSF, já que ele é que garante que o cálculo seja feito considerando individualmente cada um dos resíduos da proteína. Sem -res, o cálculo é feito de forma geral para toda a proteína
+
+# 2.5) CORREÇÃO PERIÓDICA DE PRÉ-PROCESSAMENTO - ANTERIOR À RMSD/RMSF, quando realizada
+## Averiguando a necessidade da mesma para o NMSIM (29/09/2025)
+
+### Correção de pré-processamento:
+gmx trjconv -s [$TOPOLOGIA] -f [$TRAJETORIA] -o [$OUTPUT].xtc -pcb whole -center #BioEmu
+
+gmx trjconv -s [$TOPOLOGIA] -f [$TRAJETORIA] -o [$OUTPUT].xtc -pcb mol -center #Gromacs
+
+#SELEÇÃO DE '1'('PROTEIN') para o grupo a ser CENTRALIZADO pelo parâmetro (-center); e SELEÇÃO '0'('SYSTEM') para output.
+## Seleções baseadas em ANÁLISE FOCADA NA PROTEÍNA, ALTERÁVEL EM CONDIÇÕES DE ANÁLISE DE LIGANTES.
+
+###RMSD e RMSF seguem com mesmo comando anterior, com a diferença de input de $TRAJETORIA sendo o $OUTPUT do pré-processamento.
+
+# 3) Análise de Compactividade (Rg)
+
+## 
+## Comando é o mesmo para ambas as condições (com ou sem pré-processamento), alterando apenas o input [-f] de trajetória. 
 
 
 
+```
 ---
 
 ***ANOTAÇÕES GERAIS ABAIXO***
