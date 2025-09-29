@@ -269,10 +269,28 @@ gmx trjconv -s [$TOPOLOGIA] -f [$TRAJETORIA] -o [$OUTPUT].xtc -pcb mol -center #
 
 # 3) Análise de Compactividade (Rg)
 
-## 
+## Cálculo do RAIO DE GIRAÇÃO DA PROTÉINA. Captura a estabilidade do enovelamento/fold da proteína ao longo da trajetória. Rg ESTÁVEL indica proteína com fold estável, enquanto VALORES INSTÁVEIS podem indicar DESENOVELAMENTO da proteína. 
 ## Comando é o mesmo para ambas as condições (com ou sem pré-processamento), alterando apenas o input [-f] de trajetória. 
+gmx gyrate -s [$TOPOLOGIA] -f [$TRAJETORIA] -o [$OUTPUT].xvg
 
+#SELEÇÃO DE GRUPO '('Protein'), para análise do fold da PROTEÍNA DE INTERESSE. 
 
+# 4) CONVERSÃO DE .XTC ($TRAJETORIA) PARA .PDB - para input do RING
+
+## Comando é o mesmo para ambos com ou sem pré-processamento, alteração apenas no input [-f] de trajetória de interesse.
+## NOTA: Como é o mesmo comando, e o executável de conversão será junto com o de execução do RING, CASO ESTEJA FAZENDO A ANÁLISE DE AMBOS (COM E SEM PRÉ-PROCESSAMENTO), INDIQUE A DIFERENÇA ENTRE OS MESMOS NA NOMENCLATURA DOS ARQUIVOS NO INÍCIO DO EXECUTÁVEL, pra evitar confusão posterior.
+gmx trjconv -s [$TOPOLOGIA] -f [$TRAJETORIA] -o [$OUTPUT].pdb
+
+#SELEÇÃO DO GRUPO 1('PROTEIN'), COMO GARANTIA DE SELEÇÃO DA PROTEÍNA DE INTERESSE EM CASO DE EXISTENCIA DE LIGANTE. Apenas a proteína de interesse terá sua trajetória convertida para pdb
+
+# 5) EXECUÇÃO DA FERRAMENTA RING
+## LEIA A NOTA DA ETAPA 4!!
+
+## Cria um diretório DENTRO DO ATUAL para o output, indicado pelo $PREFIXO de entrada.
+./ mkdir [$PREFIXO_SAIDA]_ring
+
+## Execução da ferramenta
+ring -i [$TRAJETORIA].pdb --all_edges --all_models --out_dir [$PREFIXO_SAIDA]_ring  
 
 ```
 ---
