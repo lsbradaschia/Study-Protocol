@@ -293,6 +293,31 @@ gmx trjconv -s [$TOPOLOGIA] -f [$TRAJETORIA] -o [$OUTPUT].pdb
 ring -i [$TRAJETORIA].pdb --all_edges --all_models --out_dir [$PREFIXO_SAIDA]_ring  
 
 ```
+
+### Tornando um script gerado em Windows executável em Linux (erro de conversão comum e chato pra dedeu)
+
+```bash
+# Já no terminal, dentro do diretório com o seu arquivo executável dentro:
+
+sed -i -r 's/\r$//' seuscript.sh
+#Em tese, isso tira os erros de conversão de passagem de arquivo de Windows pra Linux.
+
+```
+
+**Tornando executável e execução geral de script**
+```bash
+#No diretório onde se encontra o executável de interesse:
+## 1) Torne executável com chmod +x
+chmod +x seuscript.sh
+
+## 2) Execute seu arquivo .sh:
+### DENTRO DO DIRETÓRIO CONTENDO ARQUIVOS DE ENTRADA
+./executável.sh argumento1 argumento2
+
+#Cada executável tem seu próprio grupo de argumentos (E ORDEM!!), além de REQUISITOS para que possa ser utilizado. Indico sempre abrirem e lerem o arquivo .sh para identificar o que precisa. 
+
+```
+
 ---
 
 ***ANOTAÇÕES GERAIS ABAIXO***
