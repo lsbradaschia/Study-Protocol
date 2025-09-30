@@ -174,6 +174,59 @@ drive.mount('/content/drive')
 
 ## GROMACS - Adquirindo RMSD/RMSF dos outputs do BioEmu
 
+### OTIMIZAÇÃO DO PROCESSO
+
+Por muita tentativa e erro, cheguei em 2 processos gerais executáveis que podem ser usados de forma simples pra trabalhar com esses arquivos do BioEmu (e futuramente, com arquivos de dinãmica num geral): 
+
+***PARA PRÉ-PROCESSAMENTO DE TRAJETÓRIA, CÁLCULO DE RMSD, RMSF E Rg***
+[Script Executável](https://github.com/lsbradaschia/Study-Protocol/blob/main/Bash_Protocols/gmx-rms_gyr.sh)
+
+Exemplo de uso (suporta 4 arquivos - 2 análises):
+```bash
+# No diretório com arquivos e executável
+
+## 1. Tire possíveis erros de conversão (Windows pra Linux):
+
+sed -i -r 's/\r$//' gmx-rms_gyr.sh
+
+## 2. Torna o .sh executável:
+
+chmod +x gmx-rms_gyr.sh
+
+## 3. EXECUTANDO ESSE SCRIPT (no diretório atual):
+
+./gmx-rms_gyr.sh [topologia1] [traj1] [prefixo-saida] #NESSA ORDEM
+
+./gmx-rms_gyr.sh topologia1.pdb trajetoria1.xtc EXEMPLO1 #Exemplo de uso para 2 amostras - 1 análise
+
+./gmx-rm_gyr.sh topologia1.pdb trajetoria1.xtc topologia2.pdb trajetoria2.xtc EXEMPLO2 #Uso para 4 amostras - 2 análises
+
+```
+
+***PARA CONVERSÃO DE TRAJETÓRIA PARA FORMATO PDB E EXECUÇÃO DO RING***
+[Script Executável](https://github.com/lsbradaschia/Study-Protocol/blob/main/Bash_Protocols/prep-ring.sh)
+
+```bash
+# No diretório com arquivos e executável
+
+## 1. Tire possíveis erros de conversão (Windows pra Linux):
+
+sed -i -r 's/\r$//' prep-ring.sh
+
+## 2. Torna o .sh executável:
+
+chmod +x prep-ring.sh
+
+## 3. EXECUTANDO ESSE SCRIPT (no diretório atual):
+
+./prep-ring.sh [topologia1] [traj1] [prefixo-saida] #NESSA ORDEM
+
+#Esse vai só 1 análise por vez.
+
+```
+
+
+
 Todo o processo foi feito pelo VSCode, o que facilita bastante o processo de copiar/colar arquivos do computador pro servidor. Caso você seja como eu (computador Windows, conectando a um servidor Linux), eu recomendo que faça o mesmo. 
 
 Pra utilizar o `GROMACS`, eu o instalei utilizando `conda`. Eu to montando um bloco geral de comandos do conda [aqui](https://github.com/lsbradaschia/Study-Protocol/blob/main/Comandos.md), caso nunca tenham usado. É bastante simples de usar, só ressalto a importância de **criar ambientes específicos para cada ferramenta**, o que vou colocar o script de como faz aqui embaixo. 
