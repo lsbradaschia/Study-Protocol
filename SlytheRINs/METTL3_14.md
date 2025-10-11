@@ -21,6 +21,7 @@ pesquisa bibliográfica de laboratório associado, o que pode ser de interesse p
 - PDB com Mutações: []()
 - AlphaFoldDB: []()
 - PTM/Processing:
+
 | Type | Start | End | Description | Evidences (Code, Source, ID) |
 |---|---|---|---|---|
 | Initiator methionine | 1 | 1 | Removed | ECO:0007744 (PubMed: 19413330) |
