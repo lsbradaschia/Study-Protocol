@@ -41,6 +41,13 @@ pesquisa bibliográfica de laboratório associado, o que pode ser de interesse p
 | Cross-link | 215 | 215 | Glycyl lysine isopeptide (Lys-Gly) (interchain with G-Cter in SUMO1) | ECO:0000269 (PubMed: 29506078) |
 
 
+- Binary Interactions:
+
+ Type | Entry1 | Entry2 | Nº of Experiments | Intact |
+|---|---|---|---|---|
+| Binary | Q86U44 | METTL14 Q9HCE5 | 21 | [IntAct - 21 entries](https://www.ebi.ac.uk/intact/search?query=(id:EBI-11105430%20AND%20id:EBI-6661081)#interactor) |
+| Binary | Q86U44-1 | METTL14 Q9HCE5 | 10 | [IntAct - 10 entries](https://www.ebi.ac.uk/intact/search?query=(id:EBI-16084936%20AND%20id:EBI-6661081)#interactor) |
+
 ### METTL14 - Sub-unidade não-catalítica do complexo N6-metiltransferase 
 
 - UNIPROT: []()
