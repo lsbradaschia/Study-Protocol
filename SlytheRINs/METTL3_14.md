@@ -142,6 +142,8 @@ Estruturas de [Structural basis of N6-adenosine methylation by the METTL3–METT
 
 
 **METTL3:** 369-570
+
+
 **METTL14:** 117-402. *200-204 não foram possíveis de modelar*
 
   - [5IL0](https://www.rcsb.org/structure/5IL0): Crystal structural of the METTL3-METTL14 complex for N6-adenosine methylation
@@ -155,6 +157,8 @@ Estruturas de [Structural insights into the molecular mechanism of the m(6)A wri
 
 
  **METTL3:** 354-580
+
+ 
  **METTL14:** 107-395
 
  **NOTA:** Aparentemente, todos os estudos posteriores que peguei de referência pelo PDB aqui, utilizaram o flanqueamento DESSE TRABALHO para a METTL14. **BUSCAR O MOTIVO DISSO DEPOIS**
@@ -174,6 +178,8 @@ Estruturas de [Small-Molecule Inhibitors of METTL3, the Major Human Epitranscrip
 
 
  **METTL3:** 354-580
+
+ 
 **METTL14:** 107-395
 
   - [6TTP](https://www.rcsb.org/structure/6TTP): Crystal structure of the human METTL3-METTL14 complex bound to Compound 1/Adenosine (DHU_M3M_023)
@@ -190,6 +196,8 @@ Estruturas de [Discovery, Optimization, and Preclinical Pharmacology of EP652, a
 
 
 **METTL3:** 354-580
+
+
 **METTL14:** 107-395
 
   - [9G4S](https://www.rcsb.org/structure/9G4S): Crystal structure of the human METTL3-METTL14 in complex with small molecule inhibitor Compound 56
