@@ -104,7 +104,7 @@ Como isso pode ser interessante pra análise, eu vou atrás de PDBs *TANTO DAS R
 
 ---
 
-### COMPLEXO HETERODÍMERO N6-metiltransferase (se houver) - METTL3-METTL14
+### COMPLEXO HETERODÍMERO N6-metiltransferase (tem pra carai) - METTL3-METTL14
 
 Tem pdb pra caralho, e informações em outras bases de dados sobre INTERAÇÃO, que vou colocar abaixo, mas vou 
 
@@ -170,4 +170,16 @@ Estruturas de [Small-Molecule Inhibitors of METTL3, the Major Human Epitranscrip
   - [6Y4G](https://www.rcsb.org/structure/6Y4G): Crystal structure of the human METTL3-METTL14 complex bound to Sinefungin
 ---
 
-Estruturas de [](). 
+Estruturas de [Discovery, Optimization, and Preclinical Pharmacology of EP652, a METTL3 Inhibitor with Efficacy in Liquid and Solid Tumor Models, 2025](https://doi.org/10.1021/acs.jmedchem.4c02225). 6 citações.
+- Sem acesso ao paper, informações foram tiradas dos *suplementares* do artigo, aberto a todos. 
+
+
+**METTL3:** 354-580
+**METTL14:** 107-395
+
+  - [9G4S](https://www.rcsb.org/structure/9G4S): Crystal structure of the human METTL3-METTL14 in complex with small molecule inhibitor Compound 56
+  - [9G4U](https://www.rcsb.org/structure/9G4U): Crystal structure of the human METTL3-METTL14 in complex with small molecule inhibitor Compound 31
+  - [9G4W](https://www.rcsb.org/structure/9G4W): Crystal structure of the human METTL3-METTL14 in complex with small molecule inhibitor Compound 59
+
+---
+
