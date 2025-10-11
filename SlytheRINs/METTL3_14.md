@@ -59,7 +59,8 @@ Como isso pode ser interessante pra análise, eu vou atrás de PDBs *TANTO DAS R
 
 **NOTA2:** Estruturas do [Paper muito citado e populoviski]() são: 5K7M, 5K7U e 5K7W
 
-- PDB MTD3(isolado): []()
+- PDB MTD3 (apo): [>5K7M_1|Chain A|N6-adenosine-methyltransferase 70 kDa subunit|Homo sapiens](https://www.rcsb.org/structure/5K7M);
+  - MTD3 (lenght e loc): 357-580; 225aa
 - PDB MTTL3 (completa): []()
 - PDB com Mutações: []()
 - AlphaFoldDB: []()
@@ -101,6 +102,8 @@ Como isso pode ser interessante pra análise, eu vou atrás de PDBs *TANTO DAS R
 - PDB com Mutações: []()
 - AlphaFoldDB: []()
 
+---
+
 ### COMPLEXO HETERODÍMERO N6-metiltransferase (se houver) - METTL3-METTL14
 
 Tem pdb pra caralho, e informações em outras bases de dados sobre INTERAÇÃO, que vou colocar abaixo, mas vou 
@@ -113,4 +116,58 @@ Tem pdb pra caralho, e informações em outras bases de dados sobre INTERAÇÃO,
 - PDB com Mutações: []()
 - AlphaFoldDB: []()
 
+
 #### Complexo N6-METILTRANSFERASE - PDBs
+
+Estruturas de [Structural Basis for Cooperative Function of Mettl3 and Mettl14 Methyltransferases, 2016](https://www.cell.com/molecular-cell/fulltext/S1097-2765(16)30227-1?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS1097276516302271%3Fshowall%3Dtrue) 1259 citações.
+
+
+**METTL3:** 357-580
+**METTL14:** 111-456
+ 
+  - [5K7M](https://www.rcsb.org/structure/5K7M): Crystal structure of the catalytic domains of Mettl3/Mettl14 complex
+  - [5K7U](https://www.rcsb.org/structure/5K7U): Crystal structure of the catalytic domains of Mettl3/Mettl14 complex with SAM
+  - [5K7W](https://www.rcsb.org/structure/5K7W): Crystal structure of the catalytic domain of Mettl3/Mettl14 complex with SAH
+    
+---
+
+Estruturas de [Structural basis of N6-adenosine methylation by the METTL3–METTL14 complex, 2016](https://www.nature.com/articles/nature18298). 1220 citações.
+
+- Condições de estrutura: **APO**, **S-adenosyl methionine (AdoMet)-bound only to METTL3**, **S-adenosyl homocysteine (AdoHcy)-bound**;
+- Cristalização de regiões com **Função de metiltransferase**, caracterização catalítica e estrutural das estruturas do complexo.
+- Complexo METTL3-14 com conformação `fold MTase classe I`
+- Observação de Interação do complexo rica em `ligações de H`
+- Primeiras pesquisas sobre **METTL3 como sub unidade catalítica** e **METTL14 como RNA-binding**
+- METTL14 RNA-binding: "*possibly due reminescent of the target recognition domain of DNA N6-adenine MTase*"
+
+
+**METTL3:** 369-570
+**METTL14:** 117-402. *200-204 não foram possíveis de modelar*
+
+  - [5IL0](https://www.rcsb.org/structure/5IL0): Crystal structural of the METTL3-METTL14 complex for N6-adenosine methylation
+  - [5IL1](https://www.rcsb.org/structure/5IL1): Crystal structure of SAM-bound METTL3-METTL14 complex
+  - [5IL2](https://www.rcsb.org/structure/5IL2): Crystal structure of SAH-bound METTL3-METTL14 complex
+
+---
+
+Estruturas de [Small-Molecule Inhibitors of METTL3, the Major Human Epitranscriptomic Writer, 2020](https://pubmed.ncbi.nlm.nih.gov/32159918/). 167 citações.
+
+- Caracterização do mecanismo 'writer' da METTL3
+   - METTL3 aje na metilação fazendo a transferência do grupo metil do **cofator SAM** para a posição *N6* da *adenina* presente na **sequência consenso DRACH** de reconhecimento em mRNAs.
+   - Cofator SAM é composto de 2 motifs: *um para adenina, e outro para L-metionina*
+ 
+
+
+ **METTL3:** 354-580
+**METTL14:** 107-395
+
+  - [6TTP](https://www.rcsb.org/structure/6TTP): Crystal structure of the human METTL3-METTL14 complex bound to Compound 1/Adenosine (DHU_M3M_023)
+  - [6TTT](https://www.rcsb.org/structure/6TTT): Crystal structure of the human METTL3-METTL14 complex bound to Compound 2 (ASI_M3M_140)
+  - [6TTV](https://www.rcsb.org/structure/6TTV): Crystal structure of the human METTL3-METTL14 complex bound to Compound 3 (ASI_M3M_138)
+  - [6TTW](https://www.rcsb.org/structure/6TTW): Crystal structure of the human METTL3-METTL14 complex bound to Compound 4 (ASI_M3M_047)
+  - [6TTX](https://www.rcsb.org/structure/6TTX): Crystal structure of the human METTL3-METTL14 complex bound to Compound 5 (ASI_M3M_051)
+  - [6TU1](https://www.rcsb.org/structure/6TU1): Crystal structure of the human METTL3-METTL14 complex bound to Compound 8 (ASI_M3M_091)
+  - [6Y4G](https://www.rcsb.org/structure/6Y4G): Crystal structure of the human METTL3-METTL14 complex bound to Sinefungin
+---
+
+Estruturas de [](). 
