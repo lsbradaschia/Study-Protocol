@@ -149,6 +149,21 @@ Estruturas de [Structural basis of N6-adenosine methylation by the METTL3–METT
   - [5IL2](https://www.rcsb.org/structure/5IL2): Crystal structure of SAH-bound METTL3-METTL14 complex
 
 ---
+Estruturas de [Structural insights into the molecular mechanism of the m(6)A writer complex, 2016](https://pubmed.ncbi.nlm.nih.gov/27627798/). 584 citações.
+
+- Diferenças estruturais entre MTD14 de estudos do ano de 2016. Estruturas **não possuem hélix C-terminal antiparalela à hélix presente em N-terminal**, observada no estudo ['Structural Basis for Cooperative Function of Mettl3 and Mettl14 Methyltransferases'](https://www.cell.com/molecular-cell/fulltext/S1097-2765(16)30227-1?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS1097276516302271%3Fshowall%3Dtrue). Ao invés disso, possui no C-terminal a formação de **ponte dissulfeto (Cys338-Cys388)**.
+
+
+ **METTL3:** 354-580
+ **METTL14:** 107-395
+
+ **NOTA:** Aparentemente, todos os estudos posteriores que peguei de referência pelo PDB aqui, utilizaram o flanqueamento DESSE TRABALHO para a METTL14. **BUSCAR O MOTIVO DISSO DEPOIS**
+
+   - [5L6D](https://www.rcsb.org/structure/5L6D): Crystal structure of the human METTL3-METTL14 complex bound to SAH
+   - [5L6E](https://www.rcsb.org/structure/5L6E): Crystal structure of the human METTL3-METTL14 complex bound to SAM
+
+
+---
 
 Estruturas de [Small-Molecule Inhibitors of METTL3, the Major Human Epitranscriptomic Writer, 2020](https://pubmed.ncbi.nlm.nih.gov/32159918/). 167 citações.
 
