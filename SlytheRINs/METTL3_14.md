@@ -15,8 +15,8 @@ pesquisa bibliográfica de laboratório associado, o que pode ser de interesse p
 
 ### SUB-UNIDADES - 5IL0
 
-- [NMSIM - MODELAGEM MTTL3 5IL0 (369-570)]()
-- [NMSIM - MODELAGEM MTTL14 5IL0 (117-402)]()
+- [NMSIM - MODELAGEM MTTL3 5IL0 (369-570)](https://cpclab.uni-duesseldorf.de/nmsim/results/OppoaFeOjAiICL8/)
+- [NMSIM - MODELAGEM MTTL14 5IL0 (117-402)](https://cpclab.uni-duesseldorf.de/nmsim/results/pGNJjzYAwjG4N9Y/)
 
 ### COMPLEXO 5IL0 (PDB)
 
@@ -25,10 +25,12 @@ pesquisa bibliográfica de laboratório associado, o que pode ser de interesse p
 
 ## NMSIM COMPLEXO E SUB-UNIDADES - ESTRUTURA COMPLETA
 
+- [NMSIM - COMPLEXO_FULL](https://cpclab.uni-duesseldorf.de/nmsim/results/WVyiYgwoPUDk3by/)
+
 ### SUB-UNIDADES 
 
-- [NMSIM - MODELAGEM MTTL3 2-580]()
-- [NMSIM - MODELAGEM MTTL14 1-456]()
+- [NMSIM - MODELAGEM MTTL3 2-580](https://cpclab.uni-duesseldorf.de/nmsim/results/F8tRJSPtbXCDUBC/)
+- [NMSIM - MODELAGEM MTTL14 1-456](https://cpclab.uni-duesseldorf.de/nmsim/results/AyFPKQH55u6HjE1/)
 
 
 
