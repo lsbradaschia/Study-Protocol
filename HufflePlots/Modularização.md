@@ -440,6 +440,157 @@ def process_xvg_content(content, file_name):
 
 ```
 
+## Modularização de CSV_COMPILEEEE 
+
+1. **Estrutura de arquivos da Modularização de csv_compile.py**
+```python
+your_project_folder/
+├── app.py
+├── data_processing.py
+└── ui.py
+```
+
+2. **Conteúdo dos Arquivos**
+    2.1 csv_main.py
+```python
+# app.py
+
+import streamlit as st
+from ui import render_sidebar, display_results
+from data_processing import compile_data_to_csv
+
+# --- Page Configuration ---
+st.set_page_config(
+    page_title="MD Data Compiler",
+    layout="centered"
+)
+
+# --- Main Interface ---
+st.title("Molecular Dynamics Data Compiler")
+st.write("Upload your RMSD, RMSF, or Rg files to compile them into a single CSV file.")
+
+# --- Render UI and Get Inputs ---
+analysis_type, output_prefix, txt_files = render_sidebar()
+
+# --- Main Logic ---
+if txt_files:
+    st.info(f"Processing {len(txt_files)} file(s)...")
+
+    # Call the processing function from the data_processing module
+    result_df, errors = compile_data_to_csv(txt_files)
+
+    # Display any errors that occurred
+    if errors:
+        for error in errors:
+            st.error(error)
+
+    # If processing was successful, display the results
+    if result_df is not None and not result_df.empty:
+        display_results(result_df, output_prefix, analysis_type)
+
+else:
+    st.warning("Waiting for files to be uploaded. Please use the controls in the sidebar.")
+```
+    2.1 ui.py
+```python
+# ui.py
+
+import streamlit as st
+
+def render_sidebar():
+    """Renders the sidebar controls and returns their values."""
+    st.sidebar.title("⚙️ Controls")
+
+    analysis_type = st.sidebar.selectbox(
+        "1. Select data type to compile:",
+        ("RMSD", "RMSF", "Rg"),
+        help="The analysis type determines the output filename."
+    )
+
+    output_prefix = st.sidebar.text_input(
+        "2. Enter a prefix for the output CSV:",
+        value="compiled_data",
+        help="E.g., 'ProteinA'. The final name will be 'ProteinA_RMSD.csv'."
+    )
+
+    txt_files = st.sidebar.file_uploader(
+        f"3. Upload your .txt {analysis_type} files",
+        type="txt",
+        accept_multiple_files=True,
+        help="You can select multiple files at once."
+    )
+    
+    return analysis_type, output_prefix, txt_files
+
+def display_results(result_df, output_prefix, analysis_type):
+    """Displays the results DataFrame and a download button."""
+    st.success("Data compiled successfully!")
+    st.write("### Data Preview")
+    st.dataframe(result_df.head())
+
+    # Convert DataFrame to CSV in memory
+    csv_data = result_df.to_csv(index=False).encode('utf-8')
+    
+    # Assemble the final filename
+    final_filename = f"{output_prefix}_{analysis_type}.csv"
+
+    # Create the download button
+    st.download_button(
+        label=f"📥 Download {final_filename}",
+        data=csv_data,
+        file_name=final_filename,
+        mime='text/csv',
+    )
+
+```
+    2.3 data_process.py
+```python
+# data_processing.py
+
+import pandas as pd
+import os
+from typing import List, Tuple, Optional, Any
+
+def compile_data_to_csv(uploaded_files: List[Any]) -> Tuple[Optional[pd.DataFrame], List[str]]:
+    """
+    Reads a list of text files, extracts data, and merges them into a single DataFrame.
+
+    Args:
+        uploaded_files: A list of Streamlit UploadedFile objects.
+
+    Returns:
+        A tuple containing:
+        - A pandas.DataFrame with the merged data.
+        - A list of error messages encountered during processing.
+    """
+    if not uploaded_files:
+        return None, ["No files were uploaded."]
+
+    errors = []
+    
+    # Use the first file to initialize the main DataFrame
+    first_file = uploaded_files[0]
+    first_label = os.path.splitext(first_file.name)[0]
+    
+    try:
+        main_df = pd.read_csv(first_file, sep=r'\s+', header=None, names=['Model', first_label])
+    except Exception as e:
+        error_msg = f"Error processing file '{first_file.name}': {e}"
+        return None, [error_msg]
+
+    # Iterate over the remaining files and merge them
+    for file in uploaded_files[1:]:
+        label = os.path.splitext(file.name)[0]
+        try:
+            temp_df = pd.read_csv(file, sep=r'\s+', header=None, names=['Model', label])
+            # Use an 'outer' join to ensure all models from all files are kept
+            main_df = main_df.merge(temp_df, on='Model', how='outer')
+        except Exception as e:
+            errors.append(f"Error processing file '{file.name}': {e}")
+            continue # Skip to the next file on error
+
+    return main_df, errors
+```
 
 ---
 ---
