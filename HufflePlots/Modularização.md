@@ -24,6 +24,7 @@ HufflePlots_App/
 ```
 
 2. **Conteúdo dos Arquivos**
+
     2.1 main.py (Orquestrador principal):
 ```python
 # app.py
