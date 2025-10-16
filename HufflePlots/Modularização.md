@@ -1,4 +1,202 @@
-# Otimização e Modularização do HufflePlots
+# Otimização e Modularização do HufflePlots - 16/10/2025
+
+As atualizações de processamento de arquivos `.xvg` do GROMACS e compilação de arquivos de interesse em `.csv` me fez refletir sobre como melhorar o entendimento do script como um todo para um usuário que queira entende-lo. **Modularização**
+separa as etapas principais dos processos da ferramenta em diferentes arquivos `.py` armazenados no repositório, e acredito que vai ser útil para quando os outros alunos do laboratório precisarem fazer alterações na ferramenta, ou
+puxar uma função específica para outra análise de dados. 
+
+Para ter uma ideia de como modularizar, pedi ao Gemini para inicialmente fazer a Modularização do `ProtPlots.py`, para depois eu incorporar aos poucos as outras etapas de análise e processamento. 
+
+## ProtPlots.py Orquestrado
+
+1. **Estrutura de arquivos da Modularização de ProtPlots.py**
+
+```bash
+HufflePlots_App/
+├── app.py              # Arquivo principal para executar o Streamlit
+├── ui.py               # Módulo para os componentes da interface do usuário (sidebar)
+├── plotting.py         # Módulo para as funções de plotagem
+├── utils.py            # Módulo para funções utilitárias (carregar dados)
+├── example_files/
+│   ├── P03923_WTxN119S_F161L_RMSD.tsv
+│   └── P03923_WTxN119S_F161L_RMSF.tsv
+└── HufflePlots.png
+
+```
+
+2. **Conteúdo dos Arquivos**
+    2.1 main.py (Orquestrador principal):
+```python
+# app.py
+import streamlit as st
+import os
+from ui import create_sidebar
+from utils import load_data
+from plotting import plot_rmsd, plot_rmsf
+
+def main():
+    st.image('HufflePlots.png')
+    st.title("HufflePlots: Protein Molecular Dynamics *Harry Plotter*")
+
+    # Cria a sidebar e obtém as seleções do usuário
+    unit, rmsd_file_uploaded, rmsf_file_uploaded, use_example = create_sidebar()
+
+    # Define os arquivos a serem usados (upload ou exemplo)
+    rmsd_file = None
+    rmsf_file = None
+    example_folder = "example_files"
+
+    if use_example:
+        rmsd_file = os.path.join(example_folder, "P03923_WTxN119S_F161L_RMSD.tsv")
+        rmsf_file = os.path.join(example_folder, "P03923_WTxN119S_F161L_RMSF.tsv")
+    else:
+        rmsd_file = rmsd_file_uploaded
+        rmsf_file = rmsf_file_uploaded
+
+    # Processa os arquivos e gera os gráficos
+    if rmsd_file or rmsf_file:
+        st.subheader("Uploaded Data and Plots")
+
+        if rmsd_file:
+            st.write("### RMSD Data")
+            rmsd_data = load_data(rmsd_file)
+            if rmsd_data is not None:
+                st.dataframe(rmsd_data.head())
+                plot_rmsd(rmsd_data, unit)
+
+        if rmsf_file:
+            st.write("### RMSF Data")
+            rmsf_data = load_data(rmsf_file)
+            if rmsf_data is not None:
+                st.dataframe(rmsf_data.head())
+                plot_rmsf(rmsf_data, unit)
+
+if __name__ == "__main__":
+    main()
+   
+```
+
+    2.2 ui.py (Interface)
+```python
+# ui.py
+import streamlit as st
+
+def create_sidebar():
+    """Cria a sidebar e retorna as opções selecionadas pelo usuário."""
+    st.sidebar.title("Options")
+
+    # Seleção de unidade
+    st.sidebar.subheader("Files values are in Nanometers (nm) or Angstrom (Å)?")
+    unit = st.sidebar.radio("Choose the unit for y-axis:", ("nm", "Å"))
+
+    # Seção de upload de arquivos
+    st.sidebar.subheader("Upload Files")
+    rmsd_file = st.sidebar.file_uploader("Upload RMSD File (CSV/TSV)", type=["csv", "tsv"])
+    rmsf_file = st.sidebar.file_uploader("Upload RMSF File (CSV/TSV)", type=["csv", "tsv"])
+
+    # Seção de arquivos de exemplo
+    st.sidebar.subheader("Use Example Files")
+    use_example = st.sidebar.checkbox("Use Example Files")
+
+    return unit, rmsd_file, rmsf_file, use_example
+
+```
+
+    2.3 utils.py (Módulo de Utilitários) - função de carregamento de dados
+```python
+# utils.py
+import streamlit as st
+import pandas as pd
+
+def load_data(file):
+    """Carrega dados de um arquivo CSV ou TSV."""
+    try:
+        # Verifica se 'file' é um caminho de arquivo (string) ou um arquivo upado
+        if isinstance(file, str):
+            if file.endswith(".csv"):
+                return pd.read_csv(file)
+            elif file.endswith(".tsv"):
+                return pd.read_csv(file, sep="\t")
+        else:
+            if file.name.endswith(".csv"):
+                return pd.read_csv(file)
+            elif file.name.endswith(".tsv"):
+                return pd.read_csv(file, sep="\t")
+    except Exception as e:
+        st.error(f"Error loading file: {e}")
+        return None
+
+```
+
+    2.4 plotting.py (Módulo de Gráficos)
+```python
+# plotting.py
+import streamlit as st
+import plotly.express as px
+
+def plot_rmsd(data, unit):
+    """Gera e exibe o gráfico RMSD."""
+    try:
+        y_data = data.iloc[:, 1:].copy()  # Cria uma cópia para evitar SettingWithCopyWarning
+        x_col_name = data.columns[0]
+        
+        # O DataFrame original não é modificado. A conversão é feita na cópia.
+        if unit == "nm":
+            y_data = y_data / 10
+
+        # Constrói um novo DataFrame para o Plotly usar
+        plot_data = data[[x_col_name]].join(y_data)
+
+        fig = px.line(plot_data, x=x_col_name, y=plot_data.columns[1:], title="RMSD Plot")
+        fig.update_yaxes(title_text=f"RMSD ({unit})")
+        fig.update_layout(legend_title="Trajectory")
+        st.plotly_chart(fig)
+
+        # Botão de download
+        st.download_button(
+            label="Download RMSD Plot as PNG",
+            data=fig.to_image(format="png"),
+            file_name="rmsd_plot.png",
+            mime="image/png"
+        )
+    except Exception as e:
+        st.error(f"Error generating RMSD plot: {e}")
+
+def plot_rmsf(data, unit):
+    """Gera e exibe o gráfico RMSF."""
+    try:
+        y_data = data.iloc[:, 1:].copy()
+        x_col_name = data.columns[0]
+
+        if unit == "nm":
+            y_data = y_data / 10
+
+        plot_data = data[[x_col_name]].join(y_data)
+
+        fig = px.line(plot_data, x=x_col_name, y=plot_data.columns[1:], title="RMSF Plot")
+        fig.update_yaxes(title_text=f"RMSF ({unit})")
+        fig.update_layout(legend_title="Trajectory")
+        st.plotly_chart(fig)
+
+        # Botão de download
+        st.download_button(
+            label="Download RMSF Plot as PNG",
+            data=fig.to_image(format="png"),
+            file_name="rmsf_plot.png",
+            mime="image/png"
+        )
+    except Exception as e:
+        st.error(f"Error generating RMSF plot: {e}")
+
+```
+
+
+
+
+
+---
+---
+
+# Otimização e Modularização do HufflePlots - Antiga
 
 As atualizações de processamento de arquivos `.xvg` do GROMACS e compilação de arquivos de interesse em `.csv` me fez refletir sobre como melhorar o entendimento do script como um todo para um usuário que queira entende-lo. **Modularização**
 separa as etapas principais dos processos da ferramenta em diferentes arquivos `.py` armazenados no repositório, e acredito que vai ser útil para quando os outros alunos do laboratório precisarem fazer alterações na ferramenta, ou
