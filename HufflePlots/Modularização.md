@@ -6,7 +6,9 @@ puxar uma função específica para outra análise de dados.
 
 Para ter uma ideia de como modularizar, pedi ao Gemini para inicialmente fazer a Modularização do `ProtPlots.py`, para depois eu incorporar aos poucos as outras etapas de análise e processamento. 
 
-## ProtPlots.py Orquestrado - VALIDADO (rodou sem conseguir fazer exemplo do RMSF, mas acontece o mesmo pro script normal)
+## ProtPlots.py Orquestrado - VALIDADO (rodou sem conseguir fazer exemplo do RMSF, mas acontece o mesmo pro script normal) 
+
+*UPDATE: Rodou RMSD e RMSF tranquilamente após commit e push.*
 
 1. **Estrutura de arquivos da Modularização de ProtPlots.py**
 
