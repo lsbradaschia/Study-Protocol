@@ -16,6 +16,19 @@
                  # Outra alternativa:
                  python3 --version
           ```
+### 2. Execução do Script
+* **Ambiente python isolado:** A etapa é feita **dentro da pasta/diretório de interesse** *(ex: dentro do diretório de um repositório clonado)*. A localização onde o ambiente é criado delimita quais arquivos/pastas serão afetadas pelas alterações realizadas após setar o ambiente.
+     * Definição de parâmetros *[Referência](https://docs.python.org/release/3.14.0/index.html)*:
+          * `-m <module-name>`:  Busca sys.path pelo módulo previamente nomeado e executa seu processo no módulo principal. Permite utilizar comandos dentro do módulo `python` sem precisar "ativar" o módulo.
+          * ` venv`: Criação de ambientes virtuais;
+            ```bash
+                 # Cria ambiente python (em Bash):
+                 python -m venv venv
 
+                 # Ativa o ambiente isolado (Windows)
+                 .\venv\Scripts\activate
+            
+            ```
+### 3. Troubleshooting: Permissão Windows para Ativação de ambiente
 
   
