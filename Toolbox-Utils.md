@@ -12,10 +12,10 @@
        * Averiguando a existência de Python e versão:
          
           ```bash
-            # Em PowerShell/VSCode: (Funciona tanto em Windows quanto Linux)
-            python --version
-            # Outra alternativa:
-            python3 --version
-         ```
+                 # Em PowerShell/VSCode: (Funciona tanto em Windows quanto Linux)
+                 python --version
+                 # Outra alternativa:
+                 python3 --version
+          ```
 
   
