@@ -53,7 +53,8 @@
           which python
           # Output esperado: ../envs/bio_tools/bin/python
      ```
-* Outra alternativa é verificar se o ambiente ativado no terminal é **`venv`**, conforme o exemplo: 
+* Outra alternativa é verificar se o ambiente ativado no terminal é **`venv`**, conforme o exemplo:
+  ![ScreenShoot de venv ativado](Imagens/Ex-venv-ativado.png)
 
 ### 5. Exemplos de Utilização 
 * **Rodando Streamlit Local**: Upload de requirements.txt em ambiente isolado
