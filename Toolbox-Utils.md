@@ -46,7 +46,16 @@
                # Tente novamente a ativação do ambiente:
                .\venv\Scripts\activate
           ```
-### 4. Exemplos de Utilização 
+### 4. Validação
+* Para garantir que o ambiente foi ativado, basta utilizar o comando `which python` e observar o caminho da pasta:
+     ```bash
+          # Check de caminho
+          which python
+          # Output esperado: ../envs/bio_tools/bin/python
+     ```
+* Outra alternativa é verificar se o ambiente ativado no terminal é **`venv`**, conforme o exemplo: 
+
+### 5. Exemplos de Utilização 
 * **Rodando Streamlit Local**: Upload de requirements.txt em ambiente isolado
      * Definição de Parâmetros:
           * `pip install -r`: o parâmetro `r` utilizado no pip install é especifico para indicar um arquivo de requirements. Para mais informações sobre o parâmetro, digite no seu ambiente shell `pip install -h`.   
