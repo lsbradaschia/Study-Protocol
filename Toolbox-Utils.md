@@ -1,6 +1,6 @@
 # Scripts Útilitários Gerais - Versão 0.1
 
-## Manejo de Bibliotecas/Pacotes Python Isolado - Ambiente Python (venv) 
+## Manejo de Bibliotecas/Pacotes Python - Ambiente Python (venv) 
 
 ### Contexto e Objetivo
 * **OBJETIVO:** Criar ambiente isolado específico Python para upload de pacotes e bibliotecas sem conflito com a máquina.
@@ -30,5 +30,7 @@
             
             ```
 ### 3. Troubleshooting: Permissão Windows para Ativação de ambiente
+* Um problema bastante comum ao criar ambiente python venv em Windows são erros ao tentar executar a ativação do ambiente criado.
+* **Erro:**
 
   
