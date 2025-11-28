@@ -32,5 +32,19 @@
 ### 3. Troubleshooting: Permissão Windows para Ativação de ambiente
 * Um problema bastante comum ao criar ambiente python venv em Windows são erros ao tentar executar a ativação do ambiente criado.
 * **Erro:**
+     ![Screenshot de aviso de erro mais comum](Imagens/Erro-venv.png)
+* **Solução:** Alteração das Políticas de Execução PowerShell do Sistema Operacional Windows [Referência](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.5).
+     * Definição de Parâmetros:
+          * `Set-ExecutionPolicy`: Modificação e setagem de execúção em PowerShell Windows.
+          * `-Scope`: Parâmetro de especificação de valor *escopo* padrão.
+          * `-Scope Process`: O escopo do processo afeta apenas a sessão atual do PowerShell. A política de execução é salva na variável de ambiente           `$Env:PSExecutionPolicyPreference` e é excluída quando a sessão é fechada.
+          * `-ExecutionPolicy RemoteSigned`: O parâmetro `ExecutionPolicy especifica a política de execução. A política de execução `RemoteSigned` exige que todos os scripts e arquivos de configuração baixados da web sejam assinados por um editor confiável. É a política padrão para computadores com Windows Server.
+          ```bash
+               # Em caso do Erro acima ao tentar executar ativação do venv, utiliza-se o seguinte comando:
+               Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
+
+               # Tente novamente a ativação do ambiente:
+               .\venv\Scripts\activate
+          ```           
 
   
