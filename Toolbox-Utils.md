@@ -45,6 +45,27 @@
 
                # Tente novamente a ativação do ambiente:
                .\venv\Scripts\activate
-          ```           
+          ```
+### 4. Exemplos de Utilização 
+* **Rodando Streamlit Local**: Upload de requirements.txt em ambiente isolado
+     * Definição de Parâmetros:
+          * `pip install -r`: o parâmetro `r` utilizado no pip install é especifico para indicar um arquivo de requirements. Para mais informações sobre o parâmetro, digite no seu ambiente shell `pip install -h`.   
+     ```bash
+          # 1. Crie o ambiente dentro do repositório clonado
+          python -m venv venv
+
+          # 2. Troubleshooting para politica de execução Windows
+          Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
+
+          # 3. Ativação do ambiente venv
+          .\venv\Scripts\activate
+
+          # 4. Upload de bibliotecas e Dependências
+          pip install -r requirements .txt
+
+          # 5. Execução local de aplicativo Streamlit (dentro do repositório da ferramenta):
+          streamlit run main.py
+     ```
+
 
   
