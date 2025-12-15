@@ -71,7 +71,7 @@
           .\venv\Scripts\activate
 
           # 4. Upload de bibliotecas e Dependências
-          pip install -r requirements .txt
+          pip install -r requirements.txt
 
           # 5. Execução local de aplicativo Streamlit (dentro do repositório da ferramenta):
           streamlit run main.py
